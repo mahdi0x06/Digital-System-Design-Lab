@@ -1,0 +1,6 @@
+2 10 hard_block 4 fast 71 /home/mahdi/Documents/DSDL/experiment 1/multiple11/simulation/qsim/work 0 0 0 0 21 0
+2 17 cycloneiv_io_obuf 4 fast 66 /home/mahdi/altera_lite/25.1std/questa_fse/intel/verilog/cycloneiv 0 0 131072 0 138 0
+2 17 cycloneiv_io_ibuf 4 fast 66 /home/mahdi/altera_lite/25.1std/questa_fse/intel/verilog/cycloneiv 0 0 0 0 95 0
+2 20 cycloneiv_lcell_comb 4 fast 66 /home/mahdi/altera_lite/25.1std/questa_fse/intel/verilog/cycloneiv 0 0 0 0 223 0
+2 10 multiple11 4 fast 71 /home/mahdi/Documents/DSDL/experiment 1/multiple11/simulation/qsim/work 0 0 180224 0 571 0
+1 22 multiple11_vlg_vec_tst 4 fast 71 /home/mahdi/Documents/DSDL/experiment 1/multiple11/simulation/qsim/work 0 0 0 0 185 0

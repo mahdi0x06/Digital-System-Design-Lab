@@ -1,0 +1,21 @@
+|SerialComparator
+serial_a => next_greater.IN1
+serial_a => next_equal.IN0
+serial_a => next_smaller.IN1
+serial_b => next_smaller.IN1
+serial_b => next_equal.IN1
+serial_b => next_greater.IN1
+clk => master_smaller.LATCH_ENABLE
+clk => master_equal.LATCH_ENABLE
+clk => master_greater.LATCH_ENABLE
+clk => prev_greater.LATCH_ENABLE
+clk => prev_equal.LATCH_ENABLE
+clk => prev_smaller.LATCH_ENABLE
+rst => d_gt.OUTPUTSELECT
+rst => d_eq.OUTPUTSELECT
+rst => d_sm.OUTPUTSELECT
+out_greater <= prev_greater.DB_MAX_OUTPUT_PORT_TYPE
+out_equal <= prev_equal.DB_MAX_OUTPUT_PORT_TYPE
+out_smaller <= prev_smaller.DB_MAX_OUTPUT_PORT_TYPE
+
+

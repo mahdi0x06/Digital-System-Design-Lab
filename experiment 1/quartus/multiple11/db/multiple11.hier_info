@@ -1,0 +1,414 @@
+|multiple11
+out <= or.DB_MAX_OUTPUT_PORT_TYPE
+a00 => 4bitadder:inst.a0
+a01 => 4bitadder:inst.a1
+a02 => 4bitadder:inst.a2
+a03 => 4bitadder:inst.a3
+a20 => 4bitadder:inst.b0
+a21 => 4bitadder:inst.b1
+a22 => 4bitadder:inst.b2
+a23 => 4bitadder:inst.b3
+a10 => 4bitadder:inst1.a0
+a11 => 4bitadder:inst1.a1
+a12 => 4bitadder:inst1.a2
+a13 => 4bitadder:inst1.a3
+a30 => 4bitadder:inst1.b0
+a31 => 4bitadder:inst1.b1
+a32 => 4bitadder:inst1.b2
+a33 => 4bitadder:inst1.b3
+
+
+|multiple11|5bitcmp:inst5
+equal <= and12.DB_MAX_OUTPUT_PORT_TYPE
+a4 => not1.IN0
+a4 => and1.IN0
+b4 => not2.IN0
+b4 => and1.IN1
+a3 => not3.IN0
+a3 => and3.IN0
+b3 => not4.IN0
+b3 => and3.IN1
+a2 => not5.IN0
+a2 => and5.IN0
+b2 => not6.IN0
+b2 => and5.IN1
+a1 => not7.IN0
+a1 => and7.IN0
+b1 => not8.IN0
+b1 => and7.IN1
+a0 => not9.IN0
+a0 => and9.IN0
+b0 => not10.IN0
+b0 => and9.IN1
+
+
+|multiple11|5bitadder:inst2
+s0 <= FA:fa1.s
+a0 => FA:fa1.a
+b0 => FA:fa1.b
+s1 <= FA:fa2.s
+a1 => FA:fa2.a
+b1 => FA:fa2.b
+s2 <= FA:fa3.s
+a2 => FA:fa3.a
+b2 => FA:fa3.b
+s3 <= FA:fa4.s
+a3 => FA:fa4.a
+b3 => FA:fa4.b
+s4 <= FA:fa5.s
+a4 => FA:fa5.a
+b4 => FA:fa5.b
+cout5 <= FA:fa5.cout
+
+
+|multiple11|5bitadder:inst2|FA:fa1
+s <= or2.DB_MAX_OUTPUT_PORT_TYPE
+b => and2.IN0
+b => not1.IN0
+b => and3.IN1
+a => not2.IN0
+a => and1.IN0
+a => and3.IN0
+cin => and5.IN1
+cin => not3.IN0
+cin => and6.IN1
+cout <= or3.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|multiple11|5bitadder:inst2|FA:fa2
+s <= or2.DB_MAX_OUTPUT_PORT_TYPE
+b => and2.IN0
+b => not1.IN0
+b => and3.IN1
+a => not2.IN0
+a => and1.IN0
+a => and3.IN0
+cin => and5.IN1
+cin => not3.IN0
+cin => and6.IN1
+cout <= or3.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|multiple11|5bitadder:inst2|FA:fa3
+s <= or2.DB_MAX_OUTPUT_PORT_TYPE
+b => and2.IN0
+b => not1.IN0
+b => and3.IN1
+a => not2.IN0
+a => and1.IN0
+a => and3.IN0
+cin => and5.IN1
+cin => not3.IN0
+cin => and6.IN1
+cout <= or3.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|multiple11|5bitadder:inst2|FA:fa4
+s <= or2.DB_MAX_OUTPUT_PORT_TYPE
+b => and2.IN0
+b => not1.IN0
+b => and3.IN1
+a => not2.IN0
+a => and1.IN0
+a => and3.IN0
+cin => and5.IN1
+cin => not3.IN0
+cin => and6.IN1
+cout <= or3.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|multiple11|5bitadder:inst2|FA:fa5
+s <= or2.DB_MAX_OUTPUT_PORT_TYPE
+b => and2.IN0
+b => not1.IN0
+b => and3.IN1
+a => not2.IN0
+a => and1.IN0
+a => and3.IN0
+cin => and5.IN1
+cin => not3.IN0
+cin => and6.IN1
+cout <= or3.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|multiple11|4bitadder:inst
+s0 <= FA:fa1.s
+a0 => FA:fa1.a
+b0 => FA:fa1.b
+s1 <= FA:fa2.s
+a1 => FA:fa2.a
+b1 => FA:fa2.b
+s2 <= FA:fa3.s
+a2 => FA:fa3.a
+b2 => FA:fa3.b
+s3 <= FA:fa4.s
+a3 => FA:fa4.a
+b3 => FA:fa4.b
+cout <= FA:fa4.cout
+
+
+|multiple11|4bitadder:inst|FA:fa1
+s <= or2.DB_MAX_OUTPUT_PORT_TYPE
+b => and2.IN0
+b => not1.IN0
+b => and3.IN1
+a => not2.IN0
+a => and1.IN0
+a => and3.IN0
+cin => and5.IN1
+cin => not3.IN0
+cin => and6.IN1
+cout <= or3.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|multiple11|4bitadder:inst|FA:fa2
+s <= or2.DB_MAX_OUTPUT_PORT_TYPE
+b => and2.IN0
+b => not1.IN0
+b => and3.IN1
+a => not2.IN0
+a => and1.IN0
+a => and3.IN0
+cin => and5.IN1
+cin => not3.IN0
+cin => and6.IN1
+cout <= or3.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|multiple11|4bitadder:inst|FA:fa3
+s <= or2.DB_MAX_OUTPUT_PORT_TYPE
+b => and2.IN0
+b => not1.IN0
+b => and3.IN1
+a => not2.IN0
+a => and1.IN0
+a => and3.IN0
+cin => and5.IN1
+cin => not3.IN0
+cin => and6.IN1
+cout <= or3.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|multiple11|4bitadder:inst|FA:fa4
+s <= or2.DB_MAX_OUTPUT_PORT_TYPE
+b => and2.IN0
+b => not1.IN0
+b => and3.IN1
+a => not2.IN0
+a => and1.IN0
+a => and3.IN0
+cin => and5.IN1
+cin => not3.IN0
+cin => and6.IN1
+cout <= or3.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|multiple11|4bitadder:inst1
+s0 <= FA:fa1.s
+a0 => FA:fa1.a
+b0 => FA:fa1.b
+s1 <= FA:fa2.s
+a1 => FA:fa2.a
+b1 => FA:fa2.b
+s2 <= FA:fa3.s
+a2 => FA:fa3.a
+b2 => FA:fa3.b
+s3 <= FA:fa4.s
+a3 => FA:fa4.a
+b3 => FA:fa4.b
+cout <= FA:fa4.cout
+
+
+|multiple11|4bitadder:inst1|FA:fa1
+s <= or2.DB_MAX_OUTPUT_PORT_TYPE
+b => and2.IN0
+b => not1.IN0
+b => and3.IN1
+a => not2.IN0
+a => and1.IN0
+a => and3.IN0
+cin => and5.IN1
+cin => not3.IN0
+cin => and6.IN1
+cout <= or3.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|multiple11|4bitadder:inst1|FA:fa2
+s <= or2.DB_MAX_OUTPUT_PORT_TYPE
+b => and2.IN0
+b => not1.IN0
+b => and3.IN1
+a => not2.IN0
+a => and1.IN0
+a => and3.IN0
+cin => and5.IN1
+cin => not3.IN0
+cin => and6.IN1
+cout <= or3.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|multiple11|4bitadder:inst1|FA:fa3
+s <= or2.DB_MAX_OUTPUT_PORT_TYPE
+b => and2.IN0
+b => not1.IN0
+b => and3.IN1
+a => not2.IN0
+a => and1.IN0
+a => and3.IN0
+cin => and5.IN1
+cin => not3.IN0
+cin => and6.IN1
+cout <= or3.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|multiple11|4bitadder:inst1|FA:fa4
+s <= or2.DB_MAX_OUTPUT_PORT_TYPE
+b => and2.IN0
+b => not1.IN0
+b => and3.IN1
+a => not2.IN0
+a => and1.IN0
+a => and3.IN0
+cin => and5.IN1
+cin => not3.IN0
+cin => and6.IN1
+cout <= or3.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|multiple11|5bitcmp:inst6
+equal <= and12.DB_MAX_OUTPUT_PORT_TYPE
+a4 => not1.IN0
+a4 => and1.IN0
+b4 => not2.IN0
+b4 => and1.IN1
+a3 => not3.IN0
+a3 => and3.IN0
+b3 => not4.IN0
+b3 => and3.IN1
+a2 => not5.IN0
+a2 => and5.IN0
+b2 => not6.IN0
+b2 => and5.IN1
+a1 => not7.IN0
+a1 => and7.IN0
+b1 => not8.IN0
+b1 => and7.IN1
+a0 => not9.IN0
+a0 => and9.IN0
+b0 => not10.IN0
+b0 => and9.IN1
+
+
+|multiple11|5bitadder:inst3
+s0 <= FA:fa1.s
+a0 => FA:fa1.a
+b0 => FA:fa1.b
+s1 <= FA:fa2.s
+a1 => FA:fa2.a
+b1 => FA:fa2.b
+s2 <= FA:fa3.s
+a2 => FA:fa3.a
+b2 => FA:fa3.b
+s3 <= FA:fa4.s
+a3 => FA:fa4.a
+b3 => FA:fa4.b
+s4 <= FA:fa5.s
+a4 => FA:fa5.a
+b4 => FA:fa5.b
+cout5 <= FA:fa5.cout
+
+
+|multiple11|5bitadder:inst3|FA:fa1
+s <= or2.DB_MAX_OUTPUT_PORT_TYPE
+b => and2.IN0
+b => not1.IN0
+b => and3.IN1
+a => not2.IN0
+a => and1.IN0
+a => and3.IN0
+cin => and5.IN1
+cin => not3.IN0
+cin => and6.IN1
+cout <= or3.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|multiple11|5bitadder:inst3|FA:fa2
+s <= or2.DB_MAX_OUTPUT_PORT_TYPE
+b => and2.IN0
+b => not1.IN0
+b => and3.IN1
+a => not2.IN0
+a => and1.IN0
+a => and3.IN0
+cin => and5.IN1
+cin => not3.IN0
+cin => and6.IN1
+cout <= or3.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|multiple11|5bitadder:inst3|FA:fa3
+s <= or2.DB_MAX_OUTPUT_PORT_TYPE
+b => and2.IN0
+b => not1.IN0
+b => and3.IN1
+a => not2.IN0
+a => and1.IN0
+a => and3.IN0
+cin => and5.IN1
+cin => not3.IN0
+cin => and6.IN1
+cout <= or3.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|multiple11|5bitadder:inst3|FA:fa4
+s <= or2.DB_MAX_OUTPUT_PORT_TYPE
+b => and2.IN0
+b => not1.IN0
+b => and3.IN1
+a => not2.IN0
+a => and1.IN0
+a => and3.IN0
+cin => and5.IN1
+cin => not3.IN0
+cin => and6.IN1
+cout <= or3.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|multiple11|5bitadder:inst3|FA:fa5
+s <= or2.DB_MAX_OUTPUT_PORT_TYPE
+b => and2.IN0
+b => not1.IN0
+b => and3.IN1
+a => not2.IN0
+a => and1.IN0
+a => and3.IN0
+cin => and5.IN1
+cin => not3.IN0
+cin => and6.IN1
+cout <= or3.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|multiple11|5bitcmp:inst4
+equal <= and12.DB_MAX_OUTPUT_PORT_TYPE
+a4 => not1.IN0
+a4 => and1.IN0
+b4 => not2.IN0
+b4 => and1.IN1
+a3 => not3.IN0
+a3 => and3.IN0
+b3 => not4.IN0
+b3 => and3.IN1
+a2 => not5.IN0
+a2 => and5.IN0
+b2 => not6.IN0
+b2 => and5.IN1
+a1 => not7.IN0
+a1 => and7.IN0
+b1 => not8.IN0
+b1 => and7.IN1
+a0 => not9.IN0
+a0 => and9.IN0
+b0 => not10.IN0
+b0 => and9.IN1
+
+

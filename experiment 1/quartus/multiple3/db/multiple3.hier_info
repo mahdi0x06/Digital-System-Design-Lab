@@ -1,0 +1,143 @@
+|multiple3
+OUTP <= inst8.DB_MAX_OUTPUT_PORT_TYPE
+a00 => modulo3:inst.a0
+a01 => modulo3:inst.a1
+a02 => modulo3:inst.a2
+a03 => modulo3:inst.a3
+a10 => modulo3:inst1.a0
+a11 => modulo3:inst1.a1
+a12 => modulo3:inst1.a2
+a13 => modulo3:inst1.a3
+a20 => modulo3:inst2.a0
+a21 => modulo3:inst2.a1
+a22 => modulo3:inst2.a2
+a23 => modulo3:inst2.a3
+a30 => modulo3:inst3.a0
+a31 => modulo3:inst3.a1
+a32 => modulo3:inst3.a2
+a33 => modulo3:inst3.a3
+
+
+|multiple3|modulo3_adder:inst6
+O0 <= inst.DB_MAX_OUTPUT_PORT_TYPE
+b0 => inst12.IN0
+b0 => inst1.IN2
+b0 => inst7.IN1
+b1 => inst13.IN0
+b1 => inst3.IN1
+b1 => inst5.IN2
+a0 => inst2.IN2
+a0 => inst10.IN0
+a0 => inst7.IN0
+a1 => inst3.IN0
+a1 => inst11.IN0
+a1 => inst6.IN2
+O1 <= inst4.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|multiple3|modulo3_adder:inst4
+O0 <= inst.DB_MAX_OUTPUT_PORT_TYPE
+b0 => inst12.IN0
+b0 => inst1.IN2
+b0 => inst7.IN1
+b1 => inst13.IN0
+b1 => inst3.IN1
+b1 => inst5.IN2
+a0 => inst2.IN2
+a0 => inst10.IN0
+a0 => inst7.IN0
+a1 => inst3.IN0
+a1 => inst11.IN0
+a1 => inst6.IN2
+O1 <= inst4.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|multiple3|modulo3:inst
+r0 <= inst4.DB_MAX_OUTPUT_PORT_TYPE
+a2 => inst7.IN0
+a2 => inst2.IN0
+a2 => inst6.IN2
+a2 => inst9.IN2
+a1 => inst1.IN0
+a1 => inst6.IN1
+a1 => inst8.IN1
+a0 => inst.IN0
+a0 => inst10.IN1
+a0 => inst6.IN0
+a0 => inst9.IN0
+a3 => inst3.IN0
+a3 => inst11.IN1
+r1 <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|multiple3|modulo3:inst1
+r0 <= inst4.DB_MAX_OUTPUT_PORT_TYPE
+a2 => inst7.IN0
+a2 => inst2.IN0
+a2 => inst6.IN2
+a2 => inst9.IN2
+a1 => inst1.IN0
+a1 => inst6.IN1
+a1 => inst8.IN1
+a0 => inst.IN0
+a0 => inst10.IN1
+a0 => inst6.IN0
+a0 => inst9.IN0
+a3 => inst3.IN0
+a3 => inst11.IN1
+r1 <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|multiple3|modulo3_adder:inst5
+O0 <= inst.DB_MAX_OUTPUT_PORT_TYPE
+b0 => inst12.IN0
+b0 => inst1.IN2
+b0 => inst7.IN1
+b1 => inst13.IN0
+b1 => inst3.IN1
+b1 => inst5.IN2
+a0 => inst2.IN2
+a0 => inst10.IN0
+a0 => inst7.IN0
+a1 => inst3.IN0
+a1 => inst11.IN0
+a1 => inst6.IN2
+O1 <= inst4.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|multiple3|modulo3:inst2
+r0 <= inst4.DB_MAX_OUTPUT_PORT_TYPE
+a2 => inst7.IN0
+a2 => inst2.IN0
+a2 => inst6.IN2
+a2 => inst9.IN2
+a1 => inst1.IN0
+a1 => inst6.IN1
+a1 => inst8.IN1
+a0 => inst.IN0
+a0 => inst10.IN1
+a0 => inst6.IN0
+a0 => inst9.IN0
+a3 => inst3.IN0
+a3 => inst11.IN1
+r1 <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|multiple3|modulo3:inst3
+r0 <= inst4.DB_MAX_OUTPUT_PORT_TYPE
+a2 => inst7.IN0
+a2 => inst2.IN0
+a2 => inst6.IN2
+a2 => inst9.IN2
+a1 => inst1.IN0
+a1 => inst6.IN1
+a1 => inst8.IN1
+a0 => inst.IN0
+a0 => inst10.IN1
+a0 => inst6.IN0
+a0 => inst9.IN0
+a3 => inst3.IN0
+a3 => inst11.IN1
+r1 <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+
+

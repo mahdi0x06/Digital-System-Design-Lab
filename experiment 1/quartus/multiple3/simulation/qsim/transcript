@@ -1,0 +1,68 @@
+# do multiple3.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Errors: 0, Warnings: 1
+# Questa Altera Starter FPGA Edition-64 vlog 2025.2 Compiler 2025.05 May 31 2025
+# Start time: 08:05:45 on Aug 09,2026
+# vlog -work work multiple3.vo 
+# ** Note: (vlog-220) '/home/mahdi/altera_lite/25.1std/questa_fse/linux_x86_64/../modelsim.ini' is used as the ini file.
+# -- Compiling module multiple3
+# -- Compiling module hard_block
+# 
+# Top level modules:
+# 	multiple3
+# End time: 08:05:46 on Aug 09,2026, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# Questa Altera Starter FPGA Edition-64 vlog 2025.2 Compiler 2025.05 May 31 2025
+# Start time: 08:05:46 on Aug 09,2026
+# vlog -work work Waveform.vwf.vt 
+# ** Note: (vlog-220) '/home/mahdi/altera_lite/25.1std/questa_fse/linux_x86_64/../modelsim.ini' is used as the ini file.
+# -- Compiling module multiple3_vlg_vec_tst
+# 
+# Top level modules:
+# 	multiple3_vlg_vec_tst
+# End time: 08:05:46 on Aug 09,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# ** Note: (vsim-220) '/home/mahdi/altera_lite/25.1std/questa_fse/linux_x86_64/../modelsim.ini' is used as the ini file.
+# vsim -voptargs=""+acc"" -c -t 1ps -L cycloneiv_ver -L altera_ver -L altera_mf_ver -L 220model_ver -L sgate_ver -L altera_lnsim_ver work.multiple3_vlg_vec_tst 
+# Start time: 08:05:46 on Aug 09,2026
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Warning: (vopt-10908) Some optimizations are turned off because the +acc switch is in effect.
+# ** Note: (vopt-220) '/home/mahdi/altera_lite/25.1std/questa_fse/linux_x86_64/../modelsim.ini' is used as the ini file.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# //  Questa Altera Starter FPGA Edition-64
+# //  Version 2025.2 linux_x86_64 May 31 2025
+# //
+# // Unpublished work. Copyright 2025 Siemens
+# //
+# // This material contains trade secrets or otherwise confidential information
+# // owned by Siemens Industry Software Inc. or its affiliates (collectively,
+# // "SISW"), or its licensors. Access to and use of this information is strictly
+# // limited as set forth in the Customer's applicable agreements with SISW.
+# //
+# // This material may not be copied, distributed, or otherwise disclosed outside
+# // of the Customer's facilities without the express written permission of SISW,
+# // and may not be used in any way not expressly authorized by SISW.
+# //
+# Loading work.multiple3_vlg_vec_tst(fast)
+# Loading work.multiple3(fast)
+# Loading work.hard_block(fast)
+# Loading cycloneiv_ver.cycloneiv_io_obuf(fast)
+# Loading cycloneiv_ver.cycloneiv_io_ibuf(fast)
+# Loading cycloneiv_ver.cycloneiv_lcell_comb(fast)
+# Loading cycloneiv_ver.cycloneiv_lcell_comb(fast__1)
+# Loading cycloneiv_ver.cycloneiv_lcell_comb(fast__2)
+# Loading cycloneiv_ver.cycloneiv_lcell_comb(fast__3)
+# Loading cycloneiv_ver.cycloneiv_lcell_comb(fast__4)
+# Loading cycloneiv_ver.cycloneiv_lcell_comb(fast__5)
+# Loading cycloneiv_ver.cycloneiv_lcell_comb(fast__6)
+# Loading cycloneiv_ver.cycloneiv_lcell_comb(fast__7)
+# Loading cycloneiv_ver.cycloneiv_lcell_comb(fast__8)
+# Loading cycloneiv_ver.cycloneiv_lcell_comb(fast__9)
+# Loading cycloneiv_ver.cycloneiv_lcell_comb(fast__10)
+# Loading cycloneiv_ver.cycloneiv_lcell_comb(fast__11)
+# Loading cycloneiv_ver.cycloneiv_lcell_comb(fast__12)
+# after#29
+# ** Note: $finish    : Waveform.vwf.vt(75)
+#    Time: 1 us  Iteration: 0  Instance: /multiple3_vlg_vec_tst
+# End time: 08:05:46 on Aug 09,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 1

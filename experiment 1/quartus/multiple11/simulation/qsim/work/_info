@@ -1,0 +1,134 @@
+m255
+K4
+z2
+Z0 !s12c _opt1
+Z1 !s99 nomlopt
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+Z2 !s12c _opt
+R1
+R2
+R1
+R2
+R1
+!s11f vlog 2025.2 2025.05, May 31 2025
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z3 d/home/mahdi/Documents/DSDL/experiment 1/multiple11/simulation/qsim
+T_opt
+!i145 1
+!i144 0
+!s110 1786028188
+VcohFzcYezX8dzk_OJJz[b2
+Z4 04 22 4 work multiple11_vlg_vec_tst fast 0
+=1-189341dc956a-6a74a09c-6d25-b5a46
+R1
+Z5 !s12f OEM100
+Z6 !s12b OEM100
+Z7 !s124 OEM10U3 
+Z8 !s135 nogc
+Z9 o-quiet -auto_acc_if_foreign -work work -L cycloneiv_ver -L altera_ver -L altera_mf_ver -L 220model_ver -L sgate_ver -L altera_lnsim_ver +acc
+Z10 tCvgOpt 0
+n@_opt
+Z11 OL;O;2025.2;82
+R3
+T_opt1
+!i145 1
+!i144 0
+!s110 1786250450
+VE0a;Bj>;M^Ok=O>MIPUY90
+R4
+=1-189341dc956a-6a7804d2-6ba29-f758b
+R1
+R5
+R6
+R7
+R8
+R9
+R10
+n@_opt1
+R11
+R3
+vhard_block
+Z12 2multiple11.vo
+Z13 !s110 1786250526
+!i10b 1
+!s100 b[;B8>ZAB_8CI>:D1N2@o3
+IR;dZ[gZ9V@`YUnd8d3_C=1
+Z14 d/home/mahdi/Documents/DSDL/experiment 1/quartus/multiple11/simulation/qsim
+Z15 w1786250526
+Z16 8multiple11.vo
+Z17 Fmultiple11.vo
+!i122 28
+L0 841 34
+Z18 VDg1SIo80bB@j0V0VzS_@n1
+Z19 OL;L;2025.2;82
+r1
+!s85 0
+31
+Z20 !s108 1786250526.000000
+Z21 !s107 multiple11.vo|
+Z22 !s90 -work|work|multiple11.vo|
+!i113 0
+Z23 o-work work -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R10
+vmultiple11
+R12
+R13
+!i10b 1
+!s100 3>=oQca@lEI7[aF]cIH8U3
+I=CN3^X^OD?Bo=X]_@>QT82
+R14
+R15
+R16
+R17
+!i122 28
+L0 32 808
+R18
+R19
+r1
+!s85 0
+31
+R20
+R21
+R22
+!i113 0
+R23
+R10
+vmultiple11_vlg_vec_tst
+2Waveform.vwf.vt
+R13
+!i10b 1
+!s100 IMg:2@QJV`X[HUlD9joZD2
+InRdZXoJib9j]V::^:?[hn2
+R14
+w1786250525
+8Waveform.vwf.vt
+FWaveform.vwf.vt
+!i122 29
+L0 30 144
+R18
+R19
+r1
+!s85 0
+31
+R20
+!s107 Waveform.vwf.vt|
+!s90 -work|work|Waveform.vwf.vt|
+!i113 0
+R23
+R10

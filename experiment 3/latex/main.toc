@@ -1,0 +1,12 @@
+\contentsline {section}{\numberline {1}هدف آزمایش}{2}{section.1}%
+\contentsline {section}{\numberline {2}مقایسه‌کننده ۴-بیتی آبشاری \lr {(Cascadable 4-Bit Comparator)}}{2}{section.2}%
+\contentsline {subsection}{\numberline {2.1}توصیف مقایسه‌کننده ۱-بیتی آبشاری}{2}{subsection.2.1}%
+\contentsline {subsection}{\numberline {2.2}طراحی سلسله‌مراتبی مقایسه‌کننده ۴-بیتی}{3}{subsection.2.2}%
+\contentsline {subsection}{\numberline {2.3}سنتز و دیاگرام RTL در Quartus}{3}{subsection.2.3}%
+\contentsline {subsection}{\numberline {2.4}نتایج شبیه‌سازی در ModelSim و تحلیل عملکرد}{4}{subsection.2.4}%
+\contentsline {section}{\numberline {3}مقایسه‌کننده سریال \lr {(Serial Comparator)}}{4}{section.3}%
+\contentsline {subsection}{\numberline {3.1}توصیف و پیاده‌سازی مدار}{4}{subsection.3.1}%
+\contentsline {subsection}{\numberline {3.2}تحلیل نحوه پیاده‌سازی فلیپ‌فلاپ Master-Slave بدون بلوک always}{5}{subsection.3.2}%
+\contentsline {subsection}{\numberline {3.3}سنتز و دیاگرام RTL در Quartus}{6}{subsection.3.3}%
+\contentsline {subsection}{\numberline {3.4}نتایج شبیه‌سازی در ModelSim و تحلیل عملکرد}{6}{subsection.3.4}%
+\contentsline {section}{\numberline {4}مقایسه منابع سخت‌افزاری و نتیجه‌گیری}{6}{section.4}%

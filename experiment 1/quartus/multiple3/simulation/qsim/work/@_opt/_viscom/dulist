@@ -1,0 +1,18 @@
+2 10 hard_block 4 fast 78 /home/mahdi/Documents/DSDL/experiment 1/quartus/multiple3/simulation/qsim/work 0 0 0 0 21 0
+2 17 cycloneiv_io_obuf 4 fast 66 /home/mahdi/altera_lite/25.1std/questa_fse/intel/verilog/cycloneiv 0 0 0 0 138 0
+2 17 cycloneiv_io_ibuf 4 fast 66 /home/mahdi/altera_lite/25.1std/questa_fse/intel/verilog/cycloneiv 0 0 131072 0 95 0
+2 20 cycloneiv_lcell_comb 4 fast 66 /home/mahdi/altera_lite/25.1std/questa_fse/intel/verilog/cycloneiv 0 0 0 0 223 0
+2 20 cycloneiv_lcell_comb 7 fast__1 66 /home/mahdi/altera_lite/25.1std/questa_fse/intel/verilog/cycloneiv 0 0 0 0 223 0
+2 20 cycloneiv_lcell_comb 7 fast__2 66 /home/mahdi/altera_lite/25.1std/questa_fse/intel/verilog/cycloneiv 0 0 0 0 223 0
+2 20 cycloneiv_lcell_comb 7 fast__3 66 /home/mahdi/altera_lite/25.1std/questa_fse/intel/verilog/cycloneiv 0 0 0 0 223 0
+2 20 cycloneiv_lcell_comb 7 fast__4 66 /home/mahdi/altera_lite/25.1std/questa_fse/intel/verilog/cycloneiv 0 0 0 0 223 0
+2 20 cycloneiv_lcell_comb 7 fast__5 66 /home/mahdi/altera_lite/25.1std/questa_fse/intel/verilog/cycloneiv 0 0 0 0 223 0
+2 20 cycloneiv_lcell_comb 7 fast__6 66 /home/mahdi/altera_lite/25.1std/questa_fse/intel/verilog/cycloneiv 0 0 0 0 223 0
+2 20 cycloneiv_lcell_comb 7 fast__7 66 /home/mahdi/altera_lite/25.1std/questa_fse/intel/verilog/cycloneiv 0 0 0 0 223 0
+2 20 cycloneiv_lcell_comb 7 fast__8 66 /home/mahdi/altera_lite/25.1std/questa_fse/intel/verilog/cycloneiv 0 0 0 0 223 0
+2 20 cycloneiv_lcell_comb 7 fast__9 66 /home/mahdi/altera_lite/25.1std/questa_fse/intel/verilog/cycloneiv 0 0 0 0 223 0
+2 20 cycloneiv_lcell_comb 8 fast__10 66 /home/mahdi/altera_lite/25.1std/questa_fse/intel/verilog/cycloneiv 0 0 0 0 223 0
+2 20 cycloneiv_lcell_comb 8 fast__11 66 /home/mahdi/altera_lite/25.1std/questa_fse/intel/verilog/cycloneiv 0 0 0 0 223 0
+2 20 cycloneiv_lcell_comb 8 fast__12 66 /home/mahdi/altera_lite/25.1std/questa_fse/intel/verilog/cycloneiv 0 0 0 0 223 0
+2 9 multiple3 4 fast 78 /home/mahdi/Documents/DSDL/experiment 1/quartus/multiple3/simulation/qsim/work 0 0 180224 0 374 0
+1 21 multiple3_vlg_vec_tst 4 fast 78 /home/mahdi/Documents/DSDL/experiment 1/quartus/multiple3/simulation/qsim/work 0 0 0 0 185 0

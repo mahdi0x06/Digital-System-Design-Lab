@@ -1,0 +1,18 @@
+Analysis & Synthesis Status : Successful - Fri Aug  7 10:49:08 2026
+Quartus Prime Version : 25.1std.0 Build 1129 10/21/2025 SC Lite Edition
+Revision Name : multiple3
+Top-level Entity Name : multiple3
+Family : Cyclone IV GX
+Total logic elements : 13
+    Total combinational functions : 13
+    Dedicated logic registers : 0
+Total registers : 0
+Total pins : 17
+Total virtual pins : 0
+Total memory bits : 0
+Embedded Multiplier 9-bit elements : 0
+Total GXB Receiver Channel PCS : 0
+Total GXB Receiver Channel PMA : 0
+Total GXB Transmitter Channel PCS : 0
+Total GXB Transmitter Channel PMA : 0
+Total PLLs : 0

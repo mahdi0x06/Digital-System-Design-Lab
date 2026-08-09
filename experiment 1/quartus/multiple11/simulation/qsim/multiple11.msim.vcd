@@ -1,0 +1,160 @@
+$date
+	Sun Aug  9 08:12:06 2026
+$end
+$version
+	Questa Altera Starter FPGA Edition Version 2025.2
+$end
+$timescale
+	1ps
+$end
+
+$scope module multiple11_vlg_vec_tst $end
+$var reg 1 ! a00 $end
+$var reg 1 " a01 $end
+$var reg 1 # a02 $end
+$var reg 1 $ a03 $end
+$var reg 1 % a10 $end
+$var reg 1 & a11 $end
+$var reg 1 ' a12 $end
+$var reg 1 ( a13 $end
+$var reg 1 ) a20 $end
+$var reg 1 * a21 $end
+$var reg 1 + a22 $end
+$var reg 1 , a23 $end
+$var reg 1 - a30 $end
+$var reg 1 . a31 $end
+$var reg 1 / a32 $end
+$var reg 1 0 a33 $end
+$var wire 1 1 out $end
+
+$scope module i1 $end
+$var wire 1 2 gnd $end
+$var wire 1 3 vcc $end
+$var wire 1 4 unknown $end
+$var tri1 1 5 devclrn $end
+$var tri1 1 6 devpor $end
+$var tri1 1 7 devoe $end
+$var wire 1 8 out~output_o $end
+$var wire 1 9 a02~input_o $end
+$var wire 1 : a00~input_o $end
+$var wire 1 ; a01~input_o $end
+$var wire 1 < a20~input_o $end
+$var wire 1 = a21~input_o $end
+$var wire 1 > inst|fa2|or3~0_combout $end
+$var wire 1 ? a22~input_o $end
+$var wire 1 @ inst2|fa3|and6~0_combout $end
+$var wire 1 A inst2|fa3|and6~1_combout $end
+$var wire 1 B inst|fa3|or3~0_combout $end
+$var wire 1 C a23~input_o $end
+$var wire 1 D a13~input_o $end
+$var wire 1 E a12~input_o $end
+$var wire 1 F a32~input_o $end
+$var wire 1 G a30~input_o $end
+$var wire 1 H a10~input_o $end
+$var wire 1 I a31~input_o $end
+$var wire 1 J a11~input_o $end
+$var wire 1 K inst1|fa2|or3~0_combout $end
+$var wire 1 L inst1|fa3|or3~0_combout $end
+$var wire 1 M a33~input_o $end
+$var wire 1 N inst1|fa4|or2~0_combout $end
+$var wire 1 O a03~input_o $end
+$var wire 1 P inst5|or2~0_combout $end
+$var wire 1 Q inst5|or3~0_combout $end
+$var wire 1 R inst5|or3~1_combout $end
+$var wire 1 S inst|fa2|or2~0_combout $end
+$var wire 1 T inst5|and12~0_combout $end
+$var wire 1 U inst1|fa4|or3~0_combout $end
+$var wire 1 V inst5|and12~1_combout $end
+$var wire 1 W inst5|or5~0_combout $end
+$var wire 1 X inst5|and12~2_combout $end
+$var wire 1 Y inst1|fa2|or2~0_combout $end
+$var wire 1 Z inst5|or4~0_combout $end
+$var wire 1 [ inst5|and12~combout $end
+$var wire 1 \ inst5|or4~1_combout $end
+$var wire 1 ] inst4|or1~0_combout $end
+$var wire 1 ^ inst4|and12~0_combout $end
+$var wire 1 _ inst6|or3~0_combout $end
+$var wire 1 ` inst1|fa3|or2~0_combout $end
+$var wire 1 a inst3|fa3|and6~combout $end
+$var wire 1 b inst3|fa4|or3~combout $end
+$var wire 1 c inst6|and12~0_combout $end
+$var wire 1 d inst6|or4~0_combout $end
+$var wire 1 e inst6|and12~combout $end
+$var wire 1 f or~combout $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+0!
+0"
+1#
+1$
+1%
+1&
+0'
+0(
+0)
+1*
+0+
+0,
+1-
+0.
+0/
+00
+01
+02
+13
+x4
+15
+16
+17
+08
+19
+0:
+0;
+0<
+1=
+0>
+0?
+1@
+1A
+0B
+0C
+0D
+0E
+0F
+1G
+1H
+0I
+1J
+1K
+0L
+0M
+0N
+1O
+1P
+1Q
+0R
+1S
+1T
+0U
+1V
+0W
+0X
+0Y
+1Z
+0[
+1\
+0]
+0^
+0_
+1`
+0a
+0b
+0c
+1d
+0e
+0f
+$end
+#1000000

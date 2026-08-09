@@ -1,0 +1,29 @@
+\contentsline {section}{\numberline {1}هدف آزمایش}{2}{section.1}%
+\contentsline {section}{\numberline {2}شرح مسئله و مبانی کد \lr {BCD}}{2}{section.2}%
+\contentsline {subsection}{\numberline {2.1}نام‌گذاری رقم‌ها و بیت‌های ورودی}{2}{subsection.2.1}%
+\contentsline {section}{\numberline {3}روش کلی طراحی}{3}{section.3}%
+\contentsline {section}{\numberline {4}طراحی مدار تشخیص مضرب ۳}{3}{section.4}%
+\contentsline {subsection}{\numberline {4.1}مبنای ریاضی بخش‌پذیری بر ۳}{3}{subsection.4.1}%
+\contentsline {subsection}{\numberline {4.2}زیرمدار محاسبهٔ باقی‌ماندهٔ یک رقم بر ۳}{4}{subsection.4.2}%
+\contentsline {subsubsection}{\numberline {4.2.1}نقشه‌های کارنو و روابط ساده‌شده}{4}{subsubsection.4.2.1}%
+\contentsline {subsection}{\numberline {4.3}زیرمدار جمع دو باقی‌مانده به پیمانهٔ ۳}{5}{subsection.4.3}%
+\contentsline {subsubsection}{\numberline {4.3.1}نقشه‌های کارنو و روابط ساده‌شده}{6}{subsubsection.4.3.1}%
+\contentsline {subsection}{\numberline {4.4}مدار اصلی تشخیص مضرب ۳}{7}{subsection.4.4}%
+\contentsline {subsection}{\numberline {4.5}آزمون و شبیه‌سازی مدار مضرب ۳}{8}{subsection.4.5}%
+\contentsline {subsubsection}{\numberline {4.5.1}آزمون عدد ۴۳۲۱}{8}{subsubsection.4.5.1}%
+\contentsline {subsubsection}{\numberline {4.5.2}آزمون عدد ۹۹۹۹}{9}{subsubsection.4.5.2}%
+\contentsline {subsubsection}{\numberline {4.5.3}آزمون عدد ۸۴۲۱}{10}{subsubsection.4.5.3}%
+\contentsline {section}{\numberline {5}طراحی مدار تشخیص مضرب ۱۱}{10}{section.5}%
+\contentsline {subsection}{\numberline {5.1}مبنای ریاضی بخش‌پذیری بر ۱۱}{10}{subsection.5.1}%
+\contentsline {subsection}{\numberline {5.2}زیرمدار جمع‌کنندهٔ کامل یک‌بیتی}{11}{subsection.5.2}%
+\contentsline {subsubsection}{\numberline {5.2.1}نقشه‌های کارنو و روابط خروجی}{11}{subsubsection.5.2.1}%
+\contentsline {subsection}{\numberline {5.3}جمع‌کنندهٔ چهار‌بیتی}{12}{subsection.5.3}%
+\contentsline {subsection}{\numberline {5.4}جمع‌کنندهٔ پنج‌بیتی}{13}{subsection.5.4}%
+\contentsline {subsection}{\numberline {5.5}مقایسه‌گر برابری پنج‌بیتی}{14}{subsection.5.5}%
+\contentsline {subsection}{\numberline {5.6}مدار اصلی تشخیص مضرب ۱۱}{15}{subsection.5.6}%
+\contentsline {subsection}{\numberline {5.7}آزمون و شبیه‌سازی مدار مضرب ۱۱}{16}{subsection.5.7}%
+\contentsline {subsubsection}{\numberline {5.7.1}آزمون عدد ۱۲۱۰}{16}{subsubsection.5.7.1}%
+\contentsline {subsubsection}{\numberline {5.7.2}آزمون عدد ۱۹۰۳}{17}{subsubsection.5.7.2}%
+\contentsline {subsubsection}{\numberline {5.7.3}آزمون عدد ۱۲۳۴}{18}{subsubsection.5.7.3}%
+\contentsline {section}{\numberline {6}جمع‌بندی نتایج}{19}{section.6}%
+\contentsline {section}{\numberline {7}نتیجه‌گیری}{19}{section.7}%
