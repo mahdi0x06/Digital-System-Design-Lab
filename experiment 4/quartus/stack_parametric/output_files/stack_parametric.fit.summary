@@ -1,0 +1,20 @@
+Fitter Status : Successful - Mon Aug 10 10:37:23 2026
+Quartus Prime Version : 25.1std.0 Build 1129 10/21/2025 SC Lite Edition
+Revision Name : stack_parametric
+Top-level Entity Name : stack_parametric
+Family : Cyclone IV GX
+Device : EP4CGX15BF14C6
+Timing Models : Final
+Total logic elements : 61 / 14,400 ( < 1 % )
+    Total combinational functions : 45 / 14,400 ( < 1 % )
+    Dedicated logic registers : 40 / 14,400 ( < 1 % )
+Total registers : 40
+Total pins : 14 / 81 ( 17 % )
+Total virtual pins : 0
+Total memory bits : 0 / 552,960 ( 0 % )
+Embedded Multiplier 9-bit elements : 0
+Total GXB Receiver Channel PCS : 0 / 2 ( 0 % )
+Total GXB Receiver Channel PMA : 0 / 2 ( 0 % )
+Total GXB Transmitter Channel PCS : 0 / 2 ( 0 % )
+Total GXB Transmitter Channel PMA : 0 / 2 ( 0 % )
+Total PLLs : 0 / 3 ( 0 % )

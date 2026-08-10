@@ -1,0 +1,41 @@
+\contentsline {section}{\numberline {1}هدف آزمایش}{3}{section.1}%
+\contentsline {section}{\numberline {2}شرح مسئله و تصمیم‌های طراحی}{3}{section.2}%
+\contentsline {subsection}{\numberline {2.1}رفتار پشته}{3}{subsection.2.1}%
+\contentsline {subsection}{\numberline {2.2}ورودی‌ها و خروجی‌ها}{4}{subsection.2.2}%
+\contentsline {subsection}{\numberline {2.3}نکتۀ مربوط به سیگنال \lr {\texttt {Empty}}}{4}{subsection.2.3}%
+\contentsline {subsection}{\numberline {2.4}رفتار هم‌زمان دو فرمان}{4}{subsection.2.4}%
+\contentsline {section}{\numberline {3}طراحی پشته با عمق ۸ و پهنای ۴ بیت}{5}{section.3}%
+\contentsline {subsection}{\numberline {3.1}ساختار داخلی}{5}{subsection.3.1}%
+\contentsline {subsection}{\numberline {3.2}کد \lr {Verilog} نسخۀ ثابت}{5}{subsection.3.2}%
+\contentsline {section}{\numberline {4}سنتز و مشاهدۀ ساختار نسخۀ ثابت در \lr {Quartus}}{7}{section.4}%
+\contentsline {subsection}{\numberline {4.1}روند انجام کار در \lr {Quartus}}{7}{subsection.4.1}%
+\contentsline {subsection}{\numberline {4.2}نمای \lr {RTL}}{8}{subsection.4.2}%
+\contentsline {subsection}{\numberline {4.3}نمای پس از نگاشت}{9}{subsection.4.3}%
+\contentsline {subsection}{\numberline {4.4}نمای پس از جایابی و تطبیق}{10}{subsection.4.4}%
+\contentsline {subsection}{\numberline {4.5}نتیجۀ کامپایل نسخۀ ثابت}{10}{subsection.4.5}%
+\contentsline {section}{\numberline {5}آزمون پشتهٔ ثابت}{11}{section.5}%
+\contentsline {subsection}{\numberline {5.1}ساختار فایل آزمون}{11}{subsection.5.1}%
+\contentsline {subsection}{\numberline {5.2}شکل موج فایل آزمون ثابت}{12}{subsection.5.2}%
+\contentsline {section}{\numberline {6}توسعۀ پارامتری پشته}{12}{section.6}%
+\contentsline {subsection}{\numberline {6.1}پارامترهای قابل تنظیم}{12}{subsection.6.1}%
+\contentsline {subsection}{\numberline {6.2}کد \lr {Verilog} نسخۀ پارامتری}{13}{subsection.6.2}%
+\contentsline {section}{\numberline {7}سنتز نسخۀ پارامتری در \lr {Quartus}}{15}{section.7}%
+\contentsline {subsection}{\numberline {7.1}پشتهٔ پارامتری با \lr {\texttt {DEPTH=8}} و \lr {\texttt {WIDTH=4}}}{15}{subsection.7.1}%
+\contentsline {subsection}{\numberline {7.2}پشتهٔ پارامتری با \lr {\texttt {DEPTH=4}} و \lr {\texttt {WIDTH=2}}}{17}{subsection.7.2}%
+\contentsline {subsection}{\numberline {7.3}نتیجۀ کامپایل نسخۀ پارامتری}{18}{subsection.7.3}%
+\contentsline {section}{\numberline {8}فایل آزمون جامع نسخۀ پارامتری}{19}{section.8}%
+\contentsline {subsection}{\numberline {8.1}هدف از طراحی فایل آزمون جامع}{19}{subsection.8.1}%
+\contentsline {subsection}{\numberline {8.2}روند اجرای هر عملیات}{19}{subsection.8.2}%
+\contentsline {subsection}{\numberline {8.3}حالت‌های جهت‌دار و مرزی}{19}{subsection.8.3}%
+\contentsline {subsection}{\numberline {8.4}آزمون تنش تصادفی}{20}{subsection.8.4}%
+\contentsline {section}{\numberline {9}نتایج شبیه‌سازی نسخۀ پارامتری}{21}{section.9}%
+\contentsline {subsection}{\numberline {9.1}نتیجۀ \lr {\texttt {WIDTH=4, DEPTH=8}}}{22}{subsection.9.1}%
+\contentsline {subsection}{\numberline {9.2}نتیجۀ \lr {\texttt {WIDTH=2, DEPTH=4}}}{22}{subsection.9.2}%
+\contentsline {subsection}{\numberline {9.3}نتیجۀ \lr {\texttt {WIDTH=8, DEPTH=8}}}{23}{subsection.9.3}%
+\contentsline {subsection}{\numberline {9.4}نتیجۀ \lr {\texttt {WIDTH=5, DEPTH=5}}}{23}{subsection.9.4}%
+\contentsline {section}{\numberline {10}فایل آزمون نمایشی و تحلیل شکل موج‌ها}{24}{section.10}%
+\contentsline {subsection}{\numberline {10.1}چرا یک فایل آزمون کوتاه‌تر ساخته شد؟}{24}{subsection.10.1}%
+\contentsline {subsection}{\numberline {10.2}شکل موج پشتهٔ پارامتری با عمق ۸ و پهنای ۴ بیت}{25}{subsection.10.2}%
+\contentsline {subsection}{\numberline {10.3}شکل موج پشتهٔ پارامتری با عمق ۴ و پهنای ۲ بیت}{26}{subsection.10.3}%
+\contentsline {section}{\numberline {11}بحث و جمع‌بندی نتایج}{26}{section.11}%
+\contentsline {section}{\numberline {12}فایل‌های تحویلی}{27}{section.12}%
