@@ -1,0 +1,115 @@
+m255
+K4
+z2
+!s11f vlog 2020.4 2020.10, Oct 13 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dC:/modeltech64_2020.4/examples
+T_opt
+!s110 1786797166
+V<SI4]lUTKD2MFKgzABjLX0
+04 2 4 work tb fast 0
+=1-8ce9ee4d592c-6a805c6e-11d-af0
+o-quiet -auto_acc_if_foreign -work work +acc
+Z0 tCvgOpt 0
+n@_opt
+OL;O;2020.4;71
+vControlUnit
+Z1 !s110 1786797155
+!i10b 1
+!s100 B`LeVd_n^D7GbhgMN>gX`3
+Z2 !s11b Dg1SIo80bB@j0V0VzS_@n1
+ILE[Z7Hze;04S>oFn0@alM2
+Z3 dC:/modeltech64_2020.4/examples/DSD/az5
+w1786642505
+8E:/az5/ControlUnit.v
+FE:/az5/ControlUnit.v
+!i122 5
+L0 1 43
+Z4 VDg1SIo80bB@j0V0VzS_@n1
+Z5 OL;L;2020.4;71
+r1
+!s85 0
+31
+Z6 !s108 1786797155.000000
+!s107 E:/az5/ControlUnit.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|E:/az5/ControlUnit.v|
+!i113 0
+Z7 o-work work -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R0
+n@control@unit
+vDatapath
+R1
+!i10b 1
+!s100 4X=BHEI2ii5RD0[;596`O1
+R2
+I25DH:Z:W0oAlbWDEiKO`V0
+R3
+Z8 w1786642504
+8E:/az5/Datapath.v
+FE:/az5/Datapath.v
+!i122 6
+L0 1 38
+R4
+R5
+r1
+!s85 0
+31
+R6
+!s107 E:/az5/Datapath.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|E:/az5/Datapath.v|
+!i113 0
+R7
+R0
+n@datapath
+vtb
+R1
+!i10b 1
+!s100 ;mSR5lO0S_X0;;H><4NoN0
+R2
+I=iXhmiW=aL:9QGzc8n3oM2
+R3
+w1786797114
+8E:\az5\tb.v
+FE:\az5\tb.v
+!i122 7
+L0 1 88
+R4
+R5
+r1
+!s85 0
+31
+R6
+!s107 E:\az5\tb.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|E:\az5\tb.v|
+!i113 0
+R7
+R0
+vTop
+R1
+!i10b 1
+!s100 ^gNlMb>?11XF7QkIB<To12
+R2
+I9H64O:kCn@izXzO`^@PWe0
+R3
+R8
+8E:/az5/Top.v
+FE:/az5/Top.v
+!i122 8
+L0 1 41
+R4
+R5
+r1
+!s85 0
+31
+R6
+!s107 E:/az5/Top.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|E:/az5/Top.v|
+!i113 0
+R7
+R0
+n@top

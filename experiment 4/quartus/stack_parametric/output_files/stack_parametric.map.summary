@@ -1,13 +1,13 @@
-Analysis & Synthesis Status : Successful - Mon Aug 10 10:37:17 2026
+Analysis & Synthesis Status : Successful - Sat Aug 15 15:49:33 2026
 Quartus Prime Version : 25.1std.0 Build 1129 10/21/2025 SC Lite Edition
 Revision Name : stack_parametric
 Top-level Entity Name : stack_parametric
 Family : Cyclone IV GX
-Total logic elements : 77
-    Total combinational functions : 45
-    Dedicated logic registers : 40
-Total registers : 40
-Total pins : 14
+Total logic elements : 31
+    Total combinational functions : 23
+    Dedicated logic registers : 13
+Total registers : 13
+Total pins : 10
 Total virtual pins : 0
 Total memory bits : 0
 Embedded Multiplier 9-bit elements : 0

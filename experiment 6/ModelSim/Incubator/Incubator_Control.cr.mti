@@ -1,0 +1,15 @@
+C:/Users/Dotcom/Desktop/HW6_403106092_ali_soltani_403106527_yeganeh_karbalaei_403106681_mohammadmahdi_moradi/ModelSim/Incubator/incubator_testbench.v {1 {vlog -work work -vopt -stats=none C:/Users/Dotcom/Desktop/HW6_403106092_ali_soltani_403106527_yeganeh_karbalaei_403106681_mohammadmahdi_moradi/ModelSim/Incubator/incubator_testbench.v
+Model Technology ModelSim SE-64 vlog 2020.4 Compiler 2020.10 Oct 13 2020
+-- Compiling module Incubator_Control_Testbench
+
+Top level modules:
+	Incubator_Control_Testbench
+
+} {} {}} C:/Users/Dotcom/Desktop/HW6_403106092_ali_soltani_403106527_yeganeh_karbalaei_403106681_mohammadmahdi_moradi/ModelSim/Incubator/Incubator_Control.v {1 {vlog -work work -vopt -stats=none C:/Users/Dotcom/Desktop/HW6_403106092_ali_soltani_403106527_yeganeh_karbalaei_403106681_mohammadmahdi_moradi/ModelSim/Incubator/Incubator_Control.v
+Model Technology ModelSim SE-64 vlog 2020.4 Compiler 2020.10 Oct 13 2020
+-- Compiling module Incubator_Control
+
+Top level modules:
+	Incubator_Control
+
+} {} {}}

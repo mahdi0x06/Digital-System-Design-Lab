@@ -1,0 +1,129 @@
+module Incubator_Control (
+    input  wire              clk,
+    input  wire              rst,
+    input  wire signed [7:0] temp,       
+
+    output reg                heater,      
+    output reg                cooler,      
+    output reg  [1:0]         fan_speed,  
+    output reg                error_sensor 
+);
+
+    parameter signed [7:0] TEMP_MIN = -8'sd10;
+    parameter signed [7:0] TEMP_MAX =  8'sd60;
+
+    wire temp_ok = (temp >= TEMP_MIN) && (temp <= TEMP_MAX);
+	 //binary
+    //localparam [1:0] MAIN_S1   = 2'b00, 
+    //                  MAIN_S2   = 2'b01,  
+    //                  MAIN_S3   = 2'b10,  
+    //                  MAIN_SAFE = 2'b11;  
+
+    //localparam [1:0] FAN_OUT = 2'b00,
+    //                 FAN_F1  = 2'b01,   
+    //                 FAN_F2  = 2'b10,  
+    //                  FAN_F3  = 2'b11;   
+
+	 //gray:
+	 //localparam [1:0] MAIN_S1=2'b00,
+	 //						MAIN_S2=2'b01,
+	 //						MAIN_S3=2'b11,
+	 //						MAIN_SAFE=2'b10;
+							
+	 //localparam [1:0] FAN_OUT=2'b00,
+	 //					  FAN_F1=2'b01,
+	 //					  FAN_F2=2'b11,
+	 //					  FAN_F3=2'b10;
+	
+	 //onehot:
+	 localparam [3:0] MAIN_S1=4'b0001,
+						   MAIN_S2=4'b0010,
+						   MAIN_S3=4'b0100,
+	  					   MAIN_SAFE=4'b1000;
+						  
+	localparam [3:0] FAN_OUT=4'b0001,
+						  FAN_F1=4'b0010,
+						  FAN_F2=4'b0100,
+						  FAN_F3=4'b1000;
+						  
+    reg [1:0] main_state, main_next;
+    reg [1:0] fan_state,  fan_next;
+
+    always @(*) begin
+        main_next = main_state;
+        if (!temp_ok) begin
+            main_next = MAIN_SAFE;
+        end else begin
+            case (main_state)
+                MAIN_S1: begin
+                    if (temp > 8'sd35)      main_next = MAIN_S2;
+                    else if (temp < 8'sd15) main_next = MAIN_S3;
+                end
+                MAIN_S2: begin
+                    if (temp < 8'sd25) main_next = MAIN_S1;
+                end
+                MAIN_S3: begin
+                    if (temp > 8'sd30) main_next = MAIN_S1;
+                end
+                MAIN_SAFE: begin
+                    if (temp_ok) main_next = MAIN_S1;
+                end
+                default: main_next = MAIN_S1;
+            endcase
+        end
+    end
+
+    always @(*) begin
+        fan_next = fan_state;
+        if (main_next != MAIN_S2) begin
+            fan_next = FAN_OUT;
+        end else begin
+            case (fan_state)
+                FAN_OUT: if (temp > 8'sd35) fan_next = FAN_F1;
+                FAN_F1: begin
+                    if (temp > 8'sd40)      fan_next = FAN_F2;
+                    else if (temp < 8'sd25) fan_next = FAN_OUT;
+                end
+                FAN_F2: begin
+                    if (temp > 8'sd45)      fan_next = FAN_F3;
+                    else if (temp < 8'sd35) fan_next = FAN_F1;
+                end
+                FAN_F3: if (temp < 8'sd40) fan_next = FAN_F2;
+                default: fan_next = FAN_OUT;
+            endcase
+        end
+    end
+
+    always @(posedge clk or posedge rst) begin
+        if (rst) begin
+            main_state <= MAIN_S1;
+            fan_state  <= FAN_OUT;
+        end else begin
+            main_state <= main_next;
+            fan_state  <= fan_next;
+        end
+    end
+
+    always @(*) begin
+        heater       = 1'b0;
+        cooler       = 1'b0;
+        fan_speed    = 2'b00;
+        error_sensor = 1'b0;
+
+        case (main_state)
+            MAIN_S2: begin
+                cooler = 1'b1;
+                case (fan_state)
+                    FAN_F1: fan_speed = 2'b01;
+                    FAN_F2: fan_speed = 2'b10;
+                    FAN_F3: fan_speed = 2'b11;
+                    default: fan_speed = 2'b00;
+                endcase
+            end
+            MAIN_S3: heater = 1'b1;
+            MAIN_SAFE: error_sensor = 1'b1;
+            default: ;
+        endcase
+    end
+
+endmodule

@@ -1,0 +1,89 @@
+m255
+K4
+z2
+!s11f vlog 2020.4 2020.10, Oct 13 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/Dotcom/Desktop/HW3_403106092_ali_soltani_403106527_yeganeh_karbalaei_403106681/ModelSim/SerialComparator
+T_opt
+!s110 1786608022
+V_gjn^=:eho93le5^PdSkY1
+Z1 04 17 4 work Incubator_Control fast 0
+=1-94bb43dfc100-6a7d7996-23e-3de4
+Z2 o-quiet -auto_acc_if_foreign -work work +acc
+Z3 tCvgOpt 0
+n@_opt
+Z4 OL;O;2020.4;71
+R0
+T_opt1
+!s110 1786608075
+Vi;N]eR>kiN2;FFXBgBaQ12
+04 27 4 work Incubator_Control_Testbench fast 0
+=1-94bb43dfc100-6a7d79ca-3b4-2d20
+R2
+R3
+n@_opt1
+R4
+R0
+T_opt2
+!s110 1786604406
+VA2YGfO^8aWDUJR]SX7:TI0
+R1
+=1-94bb43dfc100-6a7d6b76-140-5e9c
+R2
+R3
+n@_opt2
+R4
+R0
+vIncubator_Control
+Z5 !s110 1786625426
+!i10b 1
+!s100 WiXDI8Z^5N`4TfOL[Fg;b0
+Z6 !s11b Dg1SIo80bB@j0V0VzS_@n1
+Io3R0d<_=fgn0g5A7izzzH2
+Z7 dC:/Users/Dotcom/Desktop/HW6_403106092_ali_soltani_403106527_yeganeh_karbalaei_403106681_mohammadmahdi_moradi/ModelSim/Incubator
+w1786607872
+8C:/Users/Dotcom/Desktop/HW6_403106092_ali_soltani_403106527_yeganeh_karbalaei_403106681_mohammadmahdi_moradi/ModelSim/Incubator/Incubator_Control.v
+FC:/Users/Dotcom/Desktop/HW6_403106092_ali_soltani_403106527_yeganeh_karbalaei_403106681_mohammadmahdi_moradi/ModelSim/Incubator/Incubator_Control.v
+!i122 6
+L0 1 105
+Z8 VDg1SIo80bB@j0V0VzS_@n1
+Z9 OL;L;2020.4;71
+r1
+!s85 0
+31
+Z10 !s108 1786625426.000000
+!s107 C:/Users/Dotcom/Desktop/HW6_403106092_ali_soltani_403106527_yeganeh_karbalaei_403106681_mohammadmahdi_moradi/ModelSim/Incubator/Incubator_Control.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|C:/Users/Dotcom/Desktop/HW6_403106092_ali_soltani_403106527_yeganeh_karbalaei_403106681_mohammadmahdi_moradi/ModelSim/Incubator/Incubator_Control.v|
+!i113 0
+Z11 o-work work -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R3
+n@incubator_@control
+vIncubator_Control_Testbench
+R5
+!i10b 1
+!s100 iM;`1F[GfD=]VPk4AUe`W0
+R6
+IM9[:]S??@JOdH8M4f^3=I0
+R7
+w1786603927
+8C:/Users/Dotcom/Desktop/HW6_403106092_ali_soltani_403106527_yeganeh_karbalaei_403106681_mohammadmahdi_moradi/ModelSim/Incubator/incubator_testbench.v
+FC:/Users/Dotcom/Desktop/HW6_403106092_ali_soltani_403106527_yeganeh_karbalaei_403106681_mohammadmahdi_moradi/ModelSim/Incubator/incubator_testbench.v
+!i122 7
+L0 2 83
+R8
+R9
+r1
+!s85 0
+31
+R10
+!s107 C:/Users/Dotcom/Desktop/HW6_403106092_ali_soltani_403106527_yeganeh_karbalaei_403106681_mohammadmahdi_moradi/ModelSim/Incubator/incubator_testbench.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|C:/Users/Dotcom/Desktop/HW6_403106092_ali_soltani_403106527_yeganeh_karbalaei_403106681_mohammadmahdi_moradi/ModelSim/Incubator/incubator_testbench.v|
+!i113 0
+R11
+R3
+n@incubator_@control_@testbench

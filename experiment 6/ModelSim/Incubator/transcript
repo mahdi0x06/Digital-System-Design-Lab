@@ -1,0 +1,38 @@
+# Compile of Incubator_Control.v was successful.
+# Compile of incubator_testbench.v was successful.
+# 2 compiles, 0 failed with no errors.
+vsim -gui work.Incubator_Control_Testbench -voptargs=+acc
+# vsim -gui work.Incubator_Control_Testbench -voptargs="+acc" 
+# Start time: 16:20:47 on Aug 13,2026
+# ** Note: (vsim-8009) Loading existing optimized design _opt1
+# Loading work.Incubator_Control_Testbench(fast)
+# Loading work.Incubator_Control(fast)
+add wave sim:/Incubator_Control_Testbench/*
+run
+# t=2  T=20  Heater=0  Cooler=0  Fan=00  Err=0
+# t=6  T=20  Heater=0  Cooler=0  Fan=00  Err=0
+# t=10  T=20  Heater=0  Cooler=0  Fan=00  Err=0
+# t=14  T=100  Heater=0  Cooler=0  Fan=00  Err=0
+# t=18  T=100  Heater=0  Cooler=0  Fan=00  Err=1
+# t=22  T=100  Heater=0  Cooler=0  Fan=00  Err=1
+# t=26  T=100  Heater=0  Cooler=0  Fan=00  Err=1
+# t=30  T=100  Heater=0  Cooler=0  Fan=00  Err=1
+# t=34  T=100  Heater=0  Cooler=0  Fan=00  Err=1
+# t=38  T=100  Heater=0  Cooler=0  Fan=00  Err=1
+# t=42  T=100  Heater=0  Cooler=0  Fan=00  Err=1
+# t=46  T=100  Heater=0  Cooler=0  Fan=00  Err=1
+# t=50  T=100  Heater=0  Cooler=0  Fan=00  Err=1
+# t=54  T=100  Heater=0  Cooler=0  Fan=00  Err=1
+# t=58  T=100  Heater=0  Cooler=0  Fan=00  Err=1
+# t=62  T=100  Heater=0  Cooler=0  Fan=00  Err=1
+# t=66  T=100  Heater=0  Cooler=0  Fan=00  Err=1
+# t=70  T=100  Heater=0  Cooler=0  Fan=00  Err=1
+# t=74  T=10  Heater=0  Cooler=0  Fan=00  Err=1
+# t=78  T=10  Heater=0  Cooler=0  Fan=00  Err=0
+# t=82  T=10  Heater=1  Cooler=0  Fan=00  Err=0
+# t=86  T=10  Heater=1  Cooler=0  Fan=00  Err=0
+# t=90  T=10  Heater=1  Cooler=0  Fan=00  Err=0
+# t=94  T=10  Heater=1  Cooler=0  Fan=00  Err=0
+# t=98  T=14  Heater=1  Cooler=0  Fan=00  Err=0
+# End time: 16:29:07 on Aug 13,2026, Elapsed time: 0:08:20
+# Errors: 0, Warnings: 2

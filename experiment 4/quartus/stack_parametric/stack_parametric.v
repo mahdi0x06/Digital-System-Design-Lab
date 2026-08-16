@@ -1,6 +1,6 @@
 module stack_parametric #(
-	parameter WIDTH = 4,
-	parameter DEPTH = 8
+	parameter WIDTH = 2,
+	parameter DEPTH = 4
 )
 (
     input Clk,

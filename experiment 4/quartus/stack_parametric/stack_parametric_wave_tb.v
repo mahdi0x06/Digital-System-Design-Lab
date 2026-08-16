@@ -1,8 +1,8 @@
 `timescale 1ns/1ps
 
 module stack_wave_tb #(
-    parameter WIDTH = 2,
-    parameter DEPTH = 4
+    parameter WIDTH = 5,
+    parameter DEPTH = 5
 );
 
     reg Clk;

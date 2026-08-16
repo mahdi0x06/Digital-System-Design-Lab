@@ -20,14 +20,6 @@
 					"strict" : false
 				},
 				{
-					"name" : "Data_Out[2]",
-					"strict" : false
-				},
-				{
-					"name" : "Data_Out[3]",
-					"strict" : false
-				},
-				{
 					"name" : "push",
 					"strict" : false
 				},
@@ -49,14 +41,6 @@
 				},
 				{
 					"name" : "Data_In[1]",
-					"strict" : false
-				},
-				{
-					"name" : "Data_In[2]",
-					"strict" : false
-				},
-				{
-					"name" : "Data_In[3]",
 					"strict" : false
 				}
 			]

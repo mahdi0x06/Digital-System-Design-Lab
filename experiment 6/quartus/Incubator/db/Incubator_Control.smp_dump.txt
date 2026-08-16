@@ -1,0 +1,14 @@
+
+State Machine - |Incubator_Control|fan_state
+Name fan_state.FAN_F2 fan_state.FAN_F3 fan_state.FAN_F1 fan_state.FAN_OUT 
+fan_state.FAN_OUT 0 0 0 0 
+fan_state.FAN_F1 0 0 1 1 
+fan_state.FAN_F3 0 1 0 1 
+fan_state.FAN_F2 1 0 0 1 
+
+State Machine - |Incubator_Control|main_state
+Name main_state.MAIN_S3 main_state.MAIN_SAFE main_state.MAIN_S2 main_state.MAIN_S1 
+main_state.MAIN_S1 0 0 0 0 
+main_state.MAIN_S2 0 0 1 1 
+main_state.MAIN_SAFE 0 1 0 1 
+main_state.MAIN_S3 1 0 0 1 
