@@ -1,0 +1,731 @@
+\providecommand{\UseMathForPositioningText}{}
+\documentclass[11pt,a4paper]{article}
+
+\usepackage{geometry}
+\geometry{top=2.5cm,bottom=2.5cm,left=2.5cm,right=2.5cm}
+\usepackage{graphicx}
+\usepackage{setspace}
+\usepackage{tikz}
+\usetikzlibrary{calc}
+\usepackage{eso-pic}
+\usepackage{titlesec}
+\usepackage{float}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{caption}
+\usepackage{tocloft}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage{listings}
+\usepackage{enumitem}
+\usepackage{longtable}
+\usepackage{tabularx}
+\usepackage{pifont}
+\hypersetup{hidelinks}
+
+\usepackage{xepersian}
+
+\IfFontExistsTF{XB Niloofar}
+  {\settextfont{XB Niloofar}}
+  {\settextfont{Noto Naskh Arabic}}
+
+\IfFontExistsTF{DejaVu Sans}
+  {\setlatintextfont{DejaVu Sans}}
+  {}
+
+\IfFontExistsTF{DejaVu Sans Mono}
+  {\setmonofont{DejaVu Sans Mono}}
+  {}
+
+\titleformat{\section}{\fontsize{18pt}{22pt}\bfseries}{\thesection}{1em}{}
+\titleformat{\subsection}{\fontsize{15pt}{19pt}\bfseries}{\thesubsection}{1em}{}
+\titleformat{\subsubsection}{\fontsize{13pt}{17pt}\bfseries}{\thesubsubsection}{1em}{}
+\renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}
+
+\setstretch{1.25}
+\setlength{\parindent}{1.2cm}
+\setlength{\parskip}{0.35em}
+\setlength{\emergencystretch}{2em}
+\setlength{\footnotesep}{0.5cm}
+
+\newcommand{\enfoot}[1]{\LTRfootnote{#1}}
+\newcommand{\code}[1]{\lr{\texttt{\detokenize{#1}}}}
+\newcommand{\filename}[1]{\lr{\texttt{\detokenize{#1}}}}
+\newcommand{\passmark}{\textcolor{black}{\ding{51}}}
+\renewcommand{\labelitemi}{\(\bullet\)}
+\renewcommand{\lstlistingname}{کد}
+
+\lstdefinestyle{verilogstyle}{
+  language=Verilog,
+  basicstyle=\ttfamily\small,
+  numbers=left,
+  numberstyle=\tiny,
+  stepnumber=1,
+  numbersep=8pt,
+  frame=single,
+  rulecolor=\color{black!45},
+  backgroundcolor=\color{black!3},
+  keywordstyle=\color{blue!55!black}\bfseries,
+  commentstyle=\color{green!35!black},
+  stringstyle=\color{red!55!black},
+  showstringspaces=false,
+  breaklines=true,
+  breakatwhitespace=false,
+  tabsize=4,
+  columns=fullflexible,
+  keepspaces=true,
+  captionpos=b
+}
+\lstset{style=verilogstyle}
+
+\newcommand{\reportimage}[2][0.96\textwidth]{
+  \IfFileExists{#2}
+    {\includegraphics[width=#1]{#2}}
+    {\fbox{\parbox[c][5.2cm][c]{0.88\textwidth}{\centering\textbf{محل قرارگیری تصویر}\\[0.35cm]\lr{\texttt{#2}}}}}
+}
+
+\begin{document}
+
+\AddToShipoutPictureBG{
+  \begin{tikzpicture}[remember picture,overlay]
+    \node[
+      draw,
+      line width=2.5pt,
+      minimum width=\paperwidth-2cm,
+      minimum height=\paperheight-2cm,
+      inner sep=0pt
+    ] at (current page.center) {};
+    \node[
+      draw,
+      line width=1pt,
+      minimum width=\paperwidth-2.3cm,
+      minimum height=\paperheight-2.3cm,
+      inner sep=0pt
+    ] at (current page.center) {};
+  \end{tikzpicture}
+}
+
+\begin{titlepage}
+  \centering
+  \vspace*{0.1cm}
+
+  \IfFileExists{images/logo.png}
+    {\includegraphics[width=2.9cm]{images/logo.png}}
+    {\fbox{\parbox[c][2.6cm][c]{2.6cm}{\centering\lr{images/logo.png}}}}
+  \\[0.35cm]
+
+  {\fontsize{13pt}{17pt}\selectfont دانشگاه صنعتی شریف}\\[0.1cm]
+  {\fontsize{13pt}{17pt}\selectfont دانشکده مهندسی کامپیوتر}
+
+  \vspace{0.75cm}
+  {\fontsize{15pt}{19pt}\bfseries گزارش کار آزمایش چهارم}
+
+  \vspace{0.7cm}
+  {\fontsize{11.5pt}{15pt}\selectfont عنوان:}\\[0.3cm]
+  {\fontsize{19pt}{25pt}\bfseries طراحی و پیاده‌سازی پشته}
+
+  \vspace{0.75cm}
+  {\fontsize{11.5pt}{15pt}\selectfont نام درس}\\[0.25cm]
+  {\fontsize{13.5pt}{17pt}\bfseries آزمایشگاه طراحی سامانه‌های رقمی}
+
+  \vspace{0.6cm}
+  {\fontsize{11.5pt}{15pt}\selectfont تابستان ۱۴۰۵}
+
+  \vspace{0.6cm}
+  {\fontsize{11.5pt}{15pt}\selectfont استاد}\\[0.2cm]
+  {\fontsize{13pt}{17pt}\bfseries دکتر اجلالی}
+
+  \vspace{0.45cm}
+  {\fontsize{11.5pt}{15pt}\selectfont دستیار استاد}\\[0.2cm]
+  {\fontsize{13pt}{17pt}\bfseries علی اثنی عشری}
+
+  \vspace{0.55cm}
+  {\fontsize{11.5pt}{15pt}\selectfont گروه ۲\par}
+
+  \vspace{0.25cm}
+  {\fontsize{13pt}{17pt}\bfseries
+  علی سلطانی ـ ۴۰۳۱۰۶۰۹۲\\[0.12cm]
+  یگانه کربلایی ـ ۴۰۳۱۰۶۵۲۷\\[0.12cm]
+  محمدمهدی مرادی ـ ۴۰۳۱۰۶۶۸۱\par}
+
+  \vfill
+\end{titlepage}
+
+\newpage
+\tableofcontents
+\newpage
+
+\section{هدف آزمایش}
+
+هدف این آزمایش، آشنایی با نحوۀ پیاده‌سازی داده‌ساختار پشته\enfoot{Stack} در زبان \lr{Verilog} و سپس توسعۀ همان طراحی به‌صورت پارامتری است. در مرحلۀ نخست، پشته‌ای با \textbf{عمق پشته}\enfoot{Stack Depth} برابر ۸ و \textbf{پهنای داده}\enfoot{Data Width} برابر ۴ بیت طراحی می‌شود. در مرحلۀ دوم، دو مشخّصۀ \code{DEPTH} و \code{WIDTH} به \textbf{پیمانه}\enfoot{Module} افزوده می‌شوند تا کاربر بتواند پیش از مرحلۀ \textbf{سنتز}\enfoot{Synthesis} و تولید \textbf{جریان داده}\enfoot{Bitstream}، اندازۀ پشته را تعیین کند.
+
+هدف اصلی مرحلۀ پارامتری این است که تغییر عمق یا پهنای داده، تنها با تغییر مقدار مشخّصه‌ها انجام شود و هیچ نیازی به اصلاح دستی ساختار داخلی مدار وجود نداشته باشد. برای ارزیابی درستی طراحی نیز علاوه بر آزمون‌های جهت‌دار، مجموعه‌ای از حالت‌های مرزی\enfoot{Edge Cases} و یک آزمون تنش تصادفی\enfoot{Random Stress Test} اجرا شده است.
+
+\section{شرح مسئله و تصمیم‌های طراحی}
+
+\subsection{رفتار پشته}
+
+پشته یک ساختار ذخیره‌سازی با ترتیب «آخرین ورودی، نخستین خروجی»\enfoot{Last-In First-Out (LIFO)} است. در این آزمایش، داده‌ها با فرمان درج\enfoot{Push} در بالای پشته قرار می‌گیرند و با فرمان برداشت\enfoot{Pop} از همان ناحیه خارج می‌شوند. برای نگهداری وضعیت پشته از یک \textbf{اشاره‌گر}\enfoot{Pointer} استفاده شده است که تعداد عناصر معتبر موجود در پشته را نشان می‌دهد.
+
+در نسخۀ ثابت، مقدار اشاره‌گر از صفر تا ۸ تغییر می‌کند. بنابراین:
+
+\begin{itemize}[itemsep=0.25em]
+  \item اگر اشاره‌گر صفر باشد، پشته خالی است؛
+  \item اگر اشاره‌گر ۸ باشد، پشته پر است؛
+  \item در سایر مقادیر، تعداد عناصر موجود برابر مقدار اشاره‌گر است.
+\end{itemize}
+
+\subsection{ورودی‌ها و خروجی‌ها}
+
+در این گزارش، «ساعت»\enfoot{Clock} و «بازنشانی»\enfoot{Reset} به‌ترتیب برای سیگنال زمان‌بندی و بازگرداندن مدار به وضعیت آغازین به‌کار می‌روند. جدول \ref{tab:io} رابط پیمانه را برای نسخۀ ثابت نشان می‌دهد.
+
+\begin{table}[H]
+  \centering
+  \renewcommand{\arraystretch}{1.35}
+  \begin{tabularx}{0.94\textwidth}{|c|c|X|}
+    \hline
+    \textbf{نوع} & \textbf{نام سیگنال} & \textbf{شرح} \\ \hline
+    ورودی & \code{Clk} & سیگنال ساعت؛ عملیات پشته در لبۀ بالاروندۀ آن انجام می‌شود. \\ \hline
+    ورودی & \code{RstN} & سیگنال بازنشانی فعال‌پایین و ناهم‌زمان. \\ \hline
+    ورودی & \code{Data_In[3:0]} & دادۀ چهار بیتی ورودی. \\ \hline
+    ورودی & \code{push} & فرمان درج داده در پشته. \\ \hline
+    ورودی & \code{pop} & فرمان برداشت داده از پشته. \\ \hline
+    خروجی & \code{Data_Out[3:0]} & آخرین دادۀ برداشته‌شده از پشته. \\ \hline
+    خروجی & \code{Full} & در صورت پر بودن پشته برابر یک می‌شود. \\ \hline
+    خروجی & \code{Empty} & در صورت خالی بودن پشته برابر یک می‌شود. \\ \hline
+  \end{tabularx}
+  \caption{ورودی‌ها و خروجی‌های پشته با عمق ۸ و پهنای ۴ بیت}
+  \label{tab:io}
+\end{table}
+
+\subsection{نکتۀ مربوط به سیگنال \code{Empty}}
+
+در متن صورت آزمایش عبارت \lr{Empty=0 indicates that the stack is empty} درج شده است. این عبارت با نام سیگنال \code{Empty} و تعریف رایج پرچم خالی‌بودن سازگار نیست. در این پیاده‌سازی، تعریف زیر به‌طور صریح انتخاب شده است:
+
+\[
+\mathtt{Empty}=1 \quad \Longleftrightarrow \quad \text{پشته خالی است.}
+\]
+
+تمام فایل‌های آزمون نیز بر اساس همین تعریف نوشته شده‌اند. این تصمیم در گزارش ذکر می‌شود تا رفتار مدار در این نقطه کاملاً مشخّص باشد و ابهامی در تفسیر نتایج ایجاد نشود.
+
+\subsection{رفتار هم‌زمان دو فرمان}
+
+در صورت فعال‌شدن هم‌زمان \code{push} و \code{pop}، رفتار زیر انتخاب شده است:
+
+\begin{enumerate}[itemsep=0.3em]
+  \item اگر پشته خالی باشد، امکان برداشت وجود ندارد؛ بنابراین فقط دادۀ جدید درج می‌شود و تعداد عناصر از صفر به یک می‌رسد.
+  \item اگر پشته خالی نباشد، عنصر بالایی در \code{Data_Out} قرار می‌گیرد و همان خانه با \code{Data_In} جایگزین می‌شود؛ بنابراین تعداد عناصر پشته ثابت می‌ماند.
+\end{enumerate}
+
+این تفسیر باعث می‌شود حالت هم‌زمان در وضعیت‌های خالی، عادی، تک‌عضوی و پر، رفتار تعریف‌شده و قابل‌آزمون داشته باشد.
+
+\section{طراحی پشته با عمق ۸ و پهنای ۴ بیت}
+
+\subsection{ساختار داخلی}
+
+حافظۀ پشته به‌صورت آرایه‌ای شامل ۸ خانه تعریف شده است که هر خانه یک بردار ۴ بیتی است. متغیر \code{pointer} تعداد عناصر ذخیره‌شده را نگه می‌دارد. دو پرچم وضعیت به‌صورت ترکیبی از روی اشاره‌گر ساخته می‌شوند:
+
+\[
+\mathtt{Empty} = (\mathtt{pointer}=0),
+\qquad
+\mathtt{Full} = (\mathtt{pointer}=8).
+\]
+
+در رخداد لبۀ بالاروندۀ ساعت، یکی از حالت‌های زیر اجرا می‌شود:
+
+\begin{itemize}[itemsep=0.25em]
+  \item \textbf{درج:} اگر پشته پر نباشد، داده در خانۀ \code{stack[pointer]} نوشته و اشاره‌گر یک واحد زیاد می‌شود.
+  \item \textbf{برداشت:} اگر پشته خالی نباشد، دادۀ خانۀ \code{stack[pointer-1]} به خروجی منتقل و اشاره‌گر یک واحد کم می‌شود.
+  \item \textbf{درج و برداشت هم‌زمان:} مطابق تصمیم بخش قبل عمل می‌شود.
+  \item \textbf{حالت سکون:} در صورت صفر بودن هر دو فرمان، وضعیت پشته بدون تغییر باقی می‌ماند.
+\end{itemize}
+
+بازنشانی به‌صورت فعال‌پایین و ناهم‌زمان پیاده‌سازی شده است. بنابراین با صفرشدن \code{RstN}، بدون انتظار برای لبۀ ساعت، اشاره‌گر، خروجی و تمام خانه‌های حافظه صفر می‌شوند.
+
+\subsection{کد \lr{Verilog} نسخۀ ثابت}
+
+کد کامل پیمانۀ اصلی در فایل \filename{stack.v} قرار دارد:
+
+\begin{latin}
+\lstinputlisting{../quartus/stack/stack.v}
+\end{latin}
+
+\begin{center}
+\captionof{lstlisting}{پیاده‌سازی پشتهٔ ثابت با عمق ۸ و پهنای ۴ بیت}
+\label{lst:fixed-stack}
+\end{center}
+
+\section{سنتز و مشاهدۀ ساختار نسخۀ ثابت در \lr{Quartus}}
+
+\subsection{روند انجام کار در \lr{Quartus}}
+
+برای سنتز نسخۀ ثابت، ابتدا از مسیر
+
+\begin{latin}
+\centering
+\texttt{File > New Project Wizard}
+\end{latin}
+
+یک پروژه در \lr{Quartus} ساخته شد و فایل \filename{stack.v} به آن افزوده شد. نام پیمانۀ \code{stack} به‌عنوان موجودیت سطح بالا\enfoot{Top-Level Entity} انتخاب شد. برای بررسی اولیهٔ قابل‌سنتزبودن طراحی، مرحلۀ تحلیل و سنتز از مسیر
+
+\begin{latin}
+\centering
+\texttt{Processing > Start > Start Analysis \& Synthesis}
+\end{latin}
+
+اجرا شد. سپس برای تولید نتایج مرحلۀ تطبیق و امکان مشاهدهٔ نمای پس از جایابی، کامپایل کامل از مسیر
+
+\begin{latin}
+\centering
+\texttt{Processing > Start Compilation}
+\end{latin}
+
+انجام گرفت.
+
+پس از تکمیل کامپایل، سه نمای اصلی از مسیرهای زیر باز شدند:
+
+\begin{latin}
+\begin{center}
+\texttt{Tools > Netlist Viewers > RTL Viewer}\\
+\texttt{Tools > Netlist Viewers > Technology Map Viewer (Post-Mapping)}\\
+\texttt{Tools > Netlist Viewers > Technology Map Viewer (Post-Fitting)}
+\end{center}
+\end{latin}
+
+سه نمای بررسی‌شده عبارت‌اند از:
+
+\begin{itemize}[itemsep=0.25em]
+  \item \textbf{نمای سطح انتقال ثبات}\enfoot{Register-Transfer Level (RTL)} با گزینۀ \lr{RTL Viewer}؛
+  \item \textbf{نمای نگاشت فناوری}\enfoot{Technology Map Viewer} پس از نگاشت\enfoot{Post-Mapping}؛
+  \item نمای نگاشت فناوری پس از جایابی و تطبیق\enfoot{Post-Fitting}.
+\end{itemize}
+
+نمای \lr{RTL} ساختار منطقی حاصل از توصیف رفتاری را نشان می‌دهد و شامل ثبات‌ها، انتخاب‌گرها، مقایسه‌گرها و مسیرهای داده است. نمای پس از نگاشت نشان می‌دهد این منطق چگونه روی منابع منطقی فناوری هدف نگاشت شده است. در نمای پس از جایابی و تطبیق نیز ساختار پس از مرحلۀ تطبیق نهایی با منابع \lr{FPGA} مشاهده می‌شود.
+
+\subsection{نمای \lr{RTL}}
+
+\begin{figure}[H]
+  \centering
+  \reportimage{images/image01.png}
+  \caption{نمای \lr{RTL} پشتهٔ ثابت با عمق ۸ و پهنای ۴ بیت}
+  \label{fig:fixed-rtl}
+\end{figure}
+
+شکل \ref{fig:fixed-rtl} نشان می‌دهد توصیف آرایه‌ای پشته پس از سنتز به مجموعه‌ای از ثبات‌ها، منطق انتخاب، مقایسۀ وضعیت اشاره‌گر و مسیر خروجی تبدیل شده است. شلوغی این نما طبیعی است، زیرا \lr{Quartus} روابط رفتاری مانند انتخاب خانۀ بالای پشته و کنترل نوشتن روی خانه‌ها را به منطق صریح سخت‌افزاری تبدیل می‌کند.
+
+\subsection{نمای پس از نگاشت}
+
+\begin{figure}[H]
+  \centering
+  \reportimage{images/image02.png}
+  \caption{نمای نگاشت فناوری پس از نگاشت برای پشتهٔ ثابت}
+  \label{fig:fixed-post-map}
+\end{figure}
+
+در شکل \ref{fig:fixed-post-map} منطق طراحی‌شده پس از مرحلۀ نگاشت روی منابع منطقی هدف دیده می‌شود. در این مرحله بخشی از بهینه‌سازی‌های سنتز اعمال شده و ساختار نسبت به توصیف رفتاری به سطح فناوری نزدیک‌تر شده است.
+
+\subsection{نمای پس از جایابی و تطبیق}
+
+\begin{figure}[H]
+  \centering
+  \reportimage{images/image03.png}
+  \caption{نمای نگاشت فناوری پس از جایابی و تطبیق برای پشتهٔ ثابت}
+  \label{fig:fixed-post-fit}
+\end{figure}
+
+شکل \ref{fig:fixed-post-fit} نتیجهٔ مرحلۀ نهایی‌تر پیاده‌سازی را نشان می‌دهد. این نما برای اطمینان از آن مفید است که مدار تنها در سطح رفتاری صحیح نیست، بلکه تا مرحلۀ تطبیق با منابع سخت‌افزاری نیز با موفقیت پیش رفته است.
+
+\subsection{نتیجۀ کامپایل نسخۀ ثابت}
+
+\begin{figure}[H]
+  \centering
+  \reportimage{images/image04.png}
+  \caption{پایان موفق کامپایل کامل پشتهٔ ثابت در \lr{Quartus} با صفر خطا}
+  \label{fig:compile-fixed}
+\end{figure}
+
+مطابق شکل \ref{fig:compile-fixed}، کامپایل کامل با \lr{0 errors} به پایان رسیده است. هشدارهای زمان‌بندی موجود در پنجره ناشی از کامل‌نبودن قیود زمانی پروژه هستند. از آنجا که این آزمایش به‌صورت مجازی انجام شده و برنامۀ زمانی و پایه‌های یک بورد فیزیکی برای آن تعریف نشده‌اند، این هشدارها به معنای شکست سنتز یا خطای عملکردی در طراحی نیستند.
+
+\section{آزمون پشتهٔ ثابت}
+
+\subsection{ساختار فایل آزمون}
+
+برای نسخۀ ثابت، فایل \filename{stack_tb.v} نوشته شد. در این فایل سه وظیفۀ کمکی\enfoot{Task} برای بازنشانی، درج یک داده و برداشت همراه با بررسی خروجی تعریف شده است. وظیفۀ چهارم نیز حالت درج و برداشت هم‌زمان را اعمال می‌کند. به این ترتیب، هر حالت آزمون\enfoot{Scenario} با هم‌زمانی مشخّص نسبت به لبه‌های ساعت اجرا می‌شود و در صورت مغایرت خروجی، شمارندۀ خطا افزایش می‌یابد.
+
+این فایل آزمون تنها مسیر عادی را بررسی نمی‌کند و ۱۲ حالت آزمون مجزا برای پوشش حالت‌های مرزی دارد. جدول \ref{tab:fixed-tests} هدف هر آزمون را نشان می‌دهد.
+
+\begin{longtable}{|c|p{3.4cm}|p{8.2cm}|}
+\caption{حالت‌های آزمون پشتهٔ ثابت}\label{tab:fixed-tests}\\
+\hline
+\textbf{شماره} & \textbf{آزمون} & \textbf{هدف و حالت مرزی مورد بررسی} \\ \hline
+\endfirsthead
+\hline
+\textbf{شماره} & \textbf{آزمون} & \textbf{هدف و حالت مرزی مورد بررسی} \\ \hline
+\endhead
+۱ & بازنشانی & بررسی صفرشدن اشاره‌گر و خروجی و فعال‌شدن پرچم خالی‌بودن. \\ \hline
+۲ & برداشت از پشتهٔ خالی & بررسی جلوگیری از کم‌شدن اشاره‌گر در مرز صفر و حفظ وضعیت پشته. \\ \hline
+۳ & درج و برداشت هم‌زمان روی پشتهٔ خالی & بررسی تصمیم طراحی که در این حالت فقط درج انجام شود. \\ \hline
+۴ & رفتار \lr{LIFO} عادی & درج چند داده و برداشت آن‌ها به ترتیب معکوس ورود. \\ \hline
+۵ & پرکردن پشته & بررسی تغییر اشاره‌گر تا مقدار ۸ و فعال‌شدن دقیق \code{Full}. \\ \hline
+۶ & درج روی پشتهٔ پر & بررسی جلوگیری از سرریز\enfoot{Overflow} و اطمینان از نوشته‌نشدن دادۀ اضافی. \\ \hline
+۷ & درج و برداشت هم‌زمان در حالت پر & بررسی جایگزینی عنصر بالایی بدون تغییر تعداد عناصر و باقی‌ماندن \code{Full=1}. \\ \hline
+۸ & درج و برداشت هم‌زمان در حالت عادی & بررسی خروج عنصر بالایی و جایگزینی آن با دادۀ جدید بدون تخریب عناصر پایین‌تر. \\ \hline
+۹ & حالت سکون & بررسی ثابت‌ماندن داده‌ها در چند دورۀ ساعت هنگامی که هیچ فرمانی فعال نیست. \\ \hline
+۱۰ & بازنشانی در حالت غیرخالی & بررسی ماهیت ناهم‌زمان بازنشانی و پاک‌شدن فوری وضعیت. \\ \hline
+۱۱ & درج و برداشت هم‌زمان با یک عنصر & بررسی مرز مهم \code{pointer=1} و دسترسی صحیح به \code{pointer-1}. \\ \hline
+۱۲ & بازنشانی در حالت پر & بررسی انتقال مستقیم از مرز پر به وضعیت خالی و صفرشدن خروجی. \\ \hline
+\end{longtable}
+
+اجرای این فایل آزمون با \lr{Icarus Verilog} انجام شد و نتیجۀ نهایی \lr{ALL TESTS PASSED} به دست آمد.
+
+\subsection{شکل موج فایل آزمون ثابت}
+
+\begin{figure}[H]
+  \centering
+  \reportimage{images/image05.png}
+  \caption{شکل موج اجرای فایل آزمون پشتهٔ ثابت در \lr{GTKWave}}
+  \label{fig:fixed-wave}
+\end{figure}
+
+شکل \ref{fig:fixed-wave} مجموعه‌ای از حالت‌های آزمون در فایل آزمون ۱۲ حالته را نشان می‌دهد. در بخش‌هایی که چند پالس پیاپی \code{push} مشاهده می‌شود، پشته تا مرز پرشدن پیش می‌رود و \code{Full} فعال می‌شود. سپس در بخش‌های برداشت، \code{Data_Out} داده‌های ذخیره‌شده را با ترتیب \lr{LIFO} نمایش می‌دهد. پالس‌های کوتاه \code{RstN} نیز آزمون بازنشانی ناهم‌زمان در وضعیت‌های غیرخالی و پر هستند. هم‌زمانی \code{push} و \code{pop} در چند نقطه به‌طور عمدی ایجاد شده تا حالت‌های مرزی تعریف‌شده برای این دو فرمان بررسی شوند.
+
+\section{توسعۀ پارامتری پشته}
+
+\subsection{پارامترهای قابل تنظیم}
+
+برای حذف وابستگی طراحی به اعداد ثابت ۴ و ۸، دو مشخّصۀ زیر تعریف شدند:
+
+\begin{itemize}[itemsep=0.25em]
+  \item \code{WIDTH}: پهنای هر دادۀ ذخیره‌شده؛
+  \item \code{DEPTH}: تعداد خانه‌های پشته.
+\end{itemize}
+
+در نتیجه آرایۀ حافظه به‌صورت زیر تعریف می‌شود:
+
+\begin{latin}
+\begin{center}
+\texttt{reg [WIDTH-1:0] stack [0:DEPTH-1];}
+\end{center}
+\end{latin}
+
+همچنین پهنای اشاره‌گر دیگر نباید از \code{WIDTH} گرفته شود، زیرا عرض داده و تعداد خانه‌های پشته دو مفهوم مستقل هستند. اشاره‌گر باید توانایی نمایش مقادیر صفر تا \code{DEPTH} را داشته باشد؛ بنابراین از \textbf{مشخّصۀ محلّی}\enfoot{Local Parameter} زیر استفاده شده است:
+
+\[
+\mathrm{PTR}_{\mathrm{WIDTH}}=\left\lceil\log_2(\mathtt{DEPTH}+1)\right\rceil.
+\]
+
+در \lr{Verilog} این رابطه با \code{$clog2(DEPTH + 1)} محاسبه می‌شود.
+
+این انتخاب به‌ویژه برای عمق‌های غیرتوانِ دو مهم است. برای مثال، اگر \code{DEPTH=5} باشد، اشاره‌گر باید مقادیر صفر تا پنج را نمایش دهد و به سه بیت نیاز دارد.
+
+\subsection{کد \lr{Verilog} نسخۀ پارامتری}
+
+کد کامل پیمانۀ پارامتری در فایل \filename{stack_parametric.v} آمده است:
+
+\begin{latin}
+\lstinputlisting{../quartus/stack_parametric/stack_parametric.v}
+\end{latin}
+
+\begin{center}
+\captionof{lstlisting}{پیاده‌سازی پشتهٔ پارامتری}
+\label{lst:param-stack}
+\end{center}
+
+منطق عملیاتی این نسخه با نسخۀ ثابت یکسان است؛ تفاوت اصلی در ابعاد حافظه، ابعاد پورت‌های داده، حد پرشدن و عرض اشاره‌گر است. بنابراین تغییر مشخّصه‌ها پیش از سنتز، سخت‌افزار جدید را بدون تغییر در الگوریتم داخلی تولید می‌کند.
+
+\section{سنتز نسخۀ پارامتری در \lr{Quartus}}
+
+برای نسخۀ پارامتری نیز یک پروژهٔ \lr{Quartus} با موجودیت سطح بالای \code{stack_parametric} ساخته شد و کامپایل کامل اجرا گردید. مسیر مشاهدهٔ نماها همان مسیر نسخۀ ثابت است:
+
+\begin{latin}
+\centering
+\texttt{Tools > Netlist Viewers > RTL Viewer}
+\end{latin}
+
+و برای دو نمای فناوری:
+
+\begin{latin}
+\centering
+\texttt{Tools > Netlist Viewers > Technology Map Viewer}
+\end{latin}
+
+\subsection{پشتهٔ پارامتری با \code{DEPTH=8} و \code{WIDTH=4}}
+
+ابتدا مشخّصه‌ها روی مقادیر پیش‌فرض صورت آزمایش قرار گرفتند. هدف این مرحله آن بود که نشان داده شود پارامتری‌شدن کد، رفتار و ظرفیت حالت ۸ خانه و دادهٔ ۴ بیتی را حفظ می‌کند.
+
+\begin{figure}[H]
+  \centering
+  \reportimage{images/image06.png}
+  \caption{نمای \lr{RTL} پشتهٔ پارامتری با عمق ۸ و پهنای ۴ بیت}
+  \label{fig:param-8x4-rtl}
+\end{figure}
+
+\begin{figure}[H]
+  \centering
+  \reportimage{images/image07.png}
+  \caption{نمای پس از نگاشت پشتهٔ پارامتری با عمق ۸ و پهنای ۴ بیت}
+  \label{fig:param-8x4-map}
+\end{figure}
+
+\begin{figure}[H]
+  \centering
+  \reportimage{images/image08.png}
+  \caption{نمای پس از جایابی و تطبیق پشتهٔ پارامتری با عمق ۸ و پهنای ۴ بیت}
+  \label{fig:param-8x4-fit}
+\end{figure}
+
+مقایسۀ شکل‌های \ref{fig:param-8x4-rtl} تا \ref{fig:param-8x4-fit} با نماهای نسخۀ ثابت نشان می‌دهد که برای همان عمق و پهنا، سخت‌افزار حاصل از نسخۀ پارامتری از نظر مقیاس کلی با طراحی ثابت هم‌خوان است؛ در عین حال، ساختار کد دیگر به اعداد ثابت وابسته نیست.
+
+\subsection{پشتهٔ پارامتری با \code{DEPTH=4} و \code{WIDTH=2}}
+
+برای اثبات بازتولید خودکار سخت‌افزار، مقادیر مشخّصه‌ها به عمق ۴ و پهنای ۲ بیت تغییر داده شد و پروژه دوباره سنتز شد.
+
+\begin{figure}[H]
+  \centering
+  \reportimage{images/image09.png}
+  \caption{نمای \lr{RTL} پشتهٔ پارامتری با عمق ۴ و پهنای ۲ بیت}
+  \label{fig:param-4x2-rtl}
+\end{figure}
+
+\begin{figure}[H]
+  \centering
+  \reportimage{images/image10.png}
+  \caption{نمای پس از نگاشت پشتهٔ پارامتری با عمق ۴ و پهنای ۲ بیت}
+  \label{fig:param-4x2-map}
+\end{figure}
+
+\begin{figure}[H]
+  \centering
+  \reportimage{images/image11.png}
+  \caption{نمای پس از جایابی و تطبیق پشتهٔ پارامتری با عمق ۴ و پهنای ۲ بیت}
+  \label{fig:param-4x2-fit}
+\end{figure}
+
+در این مجموعه، کاهش تعداد خانه‌ها از ۸ به ۴ و کاهش پهنای هر داده از ۴ به ۲ بیت باعث کوچک‌ترشدن شبکۀ منطقی و تعداد عناصر ذخیره‌سازی می‌شود. این تغییر در نماهای \lr{RTL} و نگاشت فناوری قابل مشاهده است و خواستۀ اصلی صورت آزمایش، یعنی بازتولید خودکار سخت‌افزار با اندازۀ جدید، را نشان می‌دهد.
+
+\subsection{نتیجۀ کامپایل نسخۀ پارامتری}
+
+\begin{figure}[H]
+  \centering
+  \reportimage{images/image12.png}
+  \caption{پایان موفق کامپایل کامل نسخۀ پارامتری در \lr{Quartus} با صفر خطا}
+  \label{fig:compile-param}
+\end{figure}
+
+شکل \ref{fig:compile-param} نشان می‌دهد نسخۀ پارامتری نیز با \lr{0 errors} کامپایل شده است. هشدارهای زمان‌بندی، همانند نسخۀ ثابت، ناشی از نبود قیود کامل زمانی در پروژۀ مجازی هستند و مانع سنتز طراحی نشده‌اند.
+
+\section{فایل آزمون جامع نسخۀ پارامتری}
+
+\subsection{هدف از طراحی فایل آزمون جامع}
+
+نسخۀ پارامتری باید برای چندین ترکیب از عمق و پهنای داده، بدون تغییر منطق آزمون قابل بررسی باشد. به همین دلیل فایل \filename{stack_parametric_tb.v} نیز پارامتری نوشته شد و پیمانۀ تحت آزمون\enfoot{Device Under Test (DUT)} با همان مقادیر \code{WIDTH} و \code{DEPTH} نمونه‌سازی می‌شود.
+
+تفاوت مهم این فایل با یک آزمون ساده در آن است که فقط چند مقدار از پیش تعیین‌شده را با خروجی مقایسه نمی‌کند. در داخل فایل آزمون یک \textbf{مدل مرجع}\enfoot{Reference Model} مستقل نگهداری می‌شود:
+
+\begin{itemize}[itemsep=0.25em]
+  \item آرایۀ \code{model_stack} وضعیت مورد انتظار پشته را ذخیره می‌کند؛
+  \item متغیر \code{model_count} تعداد عناصر مورد انتظار را نگه می‌دارد؛
+  \item بعد از هر عملیات، پرچم‌های \code{Full} و \code{Empty} با وضعیت مدل مرجع مقایسه می‌شوند؛
+  \item در برداشت و در حالت هم‌زمان، \code{Data_Out} با عنصر مورد انتظار مدل مرجع مقایسه می‌شود.
+\end{itemize}
+
+به این ترتیب، آزمون از روی رفتار درست پشته نتیجۀ مورد انتظار را تولید می‌کند و لازم نیست برای هر عمق و پهنا، پاسخ‌ها به‌صورت دستی در کد نوشته شوند.
+
+\subsection{روند اجرای هر عملیات}
+
+وظیفۀ اصلی فایل آزمون با نام \code{apply_operation} سه ورودی دارد: فعال‌بودن درج، فعال‌بودن برداشت و مقدار دادۀ ورودی. روند آن چنین است:
+
+\begin{enumerate}[itemsep=0.3em]
+  \item در لبۀ پایین‌روندۀ ساعت، ورودی‌ها تنظیم می‌شوند تا پیش از لبۀ فعال مدار پایدار باشند؛
+  \item در لبۀ بالاروندۀ بعدی، پیمانۀ اصلی عملیات را انجام می‌دهد؛
+  \item پس از یک تأخیر کوتاه، خروجی واقعی با مدل مرجع مقایسه می‌شود؛
+  \item مدل مرجع مطابق همان عملیات به‌روزرسانی می‌شود؛
+  \item در پایان، پرچم‌های پر و خالی بررسی و ورودی‌های کنترلی پاک می‌شوند.
+\end{enumerate}
+
+این روش از خطاهای ناشی از هم‌زمانی نامناسب فایل آزمون و مدار جلوگیری می‌کند و باعث می‌شود هر بررسی پس از تثبیت خروجی انجام شود.
+
+\subsection{حالت‌های جهت‌دار و مرزی}
+
+پیش از آزمون تصادفی، ۱۵ آزمون جهت‌دار اجرا می‌شوند تا حالت‌های مرزی مهم به‌طور قطعی پوشش داده شوند. آزمون شانزدهم نیز آزمون تنش تصادفی است.
+
+\begin{longtable}{|c|p{4.2cm}|p{7.5cm}|}
+\caption{آزمون‌های جامع نسخۀ پارامتری}\label{tab:param-tests}\\
+\hline
+\textbf{شماره} & \textbf{آزمون} & \textbf{هدف} \\ \hline
+\endfirsthead
+\hline
+\textbf{شماره} & \textbf{آزمون} & \textbf{هدف} \\ \hline
+\endhead
+۱ & بازنشانی & بررسی وضعیت صفر، \code{Empty=1}، \code{Full=0} و صفرشدن خروجی. \\ \hline
+۲ & برداشت در حالت خالی & جلوگیری از کم‌شدن تعداد عناصر از صفر و حفظ خروجی. \\ \hline
+۳ & درج نخستین عنصر & بررسی عبور از مرز خالی به غیرخالی و سپس صحت برداشت همان عنصر. \\ \hline
+۴ & درج و برداشت هم‌زمان در حالت خالی & بررسی اجرای فقط درج مطابق تصمیم طراحی. \\ \hline
+۵ & \lr{LIFO} عادی & بررسی ترتیب صحیح داده‌ها در چند درج و برداشت. \\ \hline
+۶ & مرز پرشدن & بررسی اینکه \code{Full} پیش از درج آخر فعال نشود و دقیقاً پس از رسیدن شمارنده به \code{DEPTH} فعال شود. \\ \hline
+۷ & درج در حالت پر & بررسی جلوگیری از سرریز و سپس برداشت تمام داده‌ها برای اطمینان از تخریب‌نشدن محتوا. \\ \hline
+۸ & برداشت از حالت پر & بررسی اینکه با یک برداشت، \code{Full} فوراً غیرفعال شود. \\ \hline
+۹ & درج و برداشت هم‌زمان در حالت پر & بررسی جایگزینی رأس و ثابت‌ماندن تعداد عناصر روی \code{DEPTH}. \\ \hline
+۱۰ & درج و برداشت هم‌زمان با یک عنصر & بررسی مرز \code{pointer=1} و جایگزینی صحیح تنها عنصر. \\ \hline
+۱۱ & درج و برداشت هم‌زمان در حالت عادی & بررسی جایگزینی رأس بدون تغییر عناصر قبلی. \\ \hline
+۱۲ & مرز خالی‌شدن & بررسی فعال‌شدن دقیق \code{Empty} پس از آخرین برداشت و سپس حفاظت در برابر برداشت اضافی. \\ \hline
+۱۳ & حالت سکون & بررسی ثابت‌ماندن وضعیت و خروجی در چند دورۀ ساعت بدون فرمان. \\ \hline
+۱۴ & بازنشانی در حالت غیرخالی & بررسی عملکرد ناهم‌زمان بازنشانی در میانهٔ کار. \\ \hline
+۱۵ & بازنشانی در حالت پر & بررسی پاک‌شدن مستقیم وضعیت مرزی پر. \\ \hline
+۱۶ & آزمون تنش تصادفی & اجرای ۲۰۰ عملیات تصادفی از میان سکون، درج، برداشت و حالت هم‌زمان و مقایسۀ نتیجه پس از تک‌تک عملیات‌ها با مدل مرجع. \\ \hline
+\end{longtable}
+
+وجود آزمون‌های ۶، ۷، ۸ و ۱۲ برای کنترل دو مرز \code{0} و \code{DEPTH} اهمیت ویژه دارد. همچنین آزمون‌های ۴، ۹، ۱۰ و ۱۱ چهار وضعیت متفاوت فرمان‌های هم‌زمان را پوشش می‌دهند؛ بنابراین رفتار هم‌زمان فقط در یک حالت عادی آزموده نشده است.
+
+\subsection{آزمون تنش تصادفی}
+
+پس از آزمون‌های جهت‌دار، ۲۰۰ عملیات تصادفی اجرا می‌شود. در هر تکرار، یکی از چهار حالت زیر انتخاب می‌شود:
+
+\begin{center}
+\begin{tabular}{c|c}
+\toprule
+\textbf{کد عملیات} & \textbf{عملیات} \\
+\midrule
+۰ & سکون \\
+۱ & درج \\
+۲ & برداشت \\
+۳ & درج و برداشت هم‌زمان \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+دادۀ ورودی نیز تصادفی است. از آنجا که مدل مرجع بعد از هر عملیات به‌روزرسانی و مقایسه می‌شود، آزمون تصادفی تنها یک «اجرای بدون خطا» نیست؛ بلکه هر مرحله دارای بررسی خودکار است. در پایان نیز تمام عناصر باقی‌مانده برداشت می‌شوند و یک برداشت اضافی روی پشتهٔ خالی انجام می‌شود تا وضعیت نهایی نیز کنترل شود.
+
+\section{نتایج شبیه‌سازی نسخۀ پارامتری}
+
+برای اثبات عمومی‌بودن طراحی، فایل آزمون جامع روی چهار ترکیب متفاوت اجرا شد. دو ترکیب نخست به‌ترتیب حالت اصلی صورت آزمایش و یک نسخۀ کوچک‌تر هستند. ترکیب \code{WIDTH=8, DEPTH=8} تغییر پهنا را به‌تنهایی بررسی می‌کند و ترکیب \code{WIDTH=5, DEPTH=5} نیز اهمیت ویژه دارد، زیرا عمق ۵ توانِ دو نیست.
+
+\begin{table}[H]
+  \centering
+  \renewcommand{\arraystretch}{1.35}
+  \begin{tabular}{c|c|c|c}
+    \toprule
+    \textbf{پهنای داده} & \textbf{عمق پشته} & \textbf{تعداد بررسی‌ها} & \textbf{نتیجه} \\
+    \midrule
+    ۴ & ۸ & ۱۲۴۴ & \passmark\ \lr{ALL TESTS PASSED} \\
+    ۲ & ۴ & ۱۱۳۲ & \passmark\ \lr{ALL TESTS PASSED} \\
+    ۸ & ۸ & ۱۲۴۴ & \passmark\ \lr{ALL TESTS PASSED} \\
+    ۵ & ۵ & ۱۱۶۰ & \passmark\ \lr{ALL TESTS PASSED} \\
+    \bottomrule
+  \end{tabular}
+  \caption{خلاصۀ نتایج فایل آزمون جامع برای چهار پیکربندی}
+  \label{tab:test-summary}
+\end{table}
+
+\subsection{نتیجۀ \code{WIDTH=4, DEPTH=8}}
+
+\begin{figure}[H]
+  \centering
+  \reportimage[0.86\textwidth]{images/image13.png}
+  \caption{عبور موفق ۱۲۴۴ بررسی برای پشتهٔ پارامتری با عمق ۸ و پهنای ۴ بیت}
+  \label{fig:test-8x4}
+\end{figure}
+
+\subsection{نتیجۀ \code{WIDTH=2, DEPTH=4}}
+
+\begin{figure}[H]
+  \centering
+  \reportimage[0.86\textwidth]{images/image14.png}
+  \caption{عبور موفق ۱۱۳۲ بررسی برای پشتهٔ پارامتری با عمق ۴ و پهنای ۲ بیت}
+  \label{fig:test-4x2}
+\end{figure}
+
+\subsection{نتیجۀ \code{WIDTH=8, DEPTH=8}}
+
+\begin{figure}[H]
+  \centering
+  \reportimage[0.86\textwidth]{images/image15.png}
+  \caption{عبور موفق ۱۲۴۴ بررسی با افزایش پهنای داده به ۸ بیت}
+  \label{fig:test-8x8}
+\end{figure}
+
+\subsection{نتیجۀ \code{WIDTH=5, DEPTH=5}}
+
+\begin{figure}[H]
+  \centering
+  \reportimage[0.86\textwidth]{images/image16.png}
+  \caption{عبور موفق ۱۱۶۰ بررسی برای عمق غیرتوانِ دو برابر ۵}
+  \label{fig:test-5x5}
+\end{figure}
+
+نتیجۀ شکل \ref{fig:test-5x5} تأیید مهمی برای فرمول پهنای اشاره‌گر است. در این حالت \code{PTR_WIDTH=$clog2(6)=3} می‌شود و اشاره‌گر بدون نیاز به تغییر دستی کد قادر است مقادیر صفر تا پنج را نمایش دهد.
+
+\section{فایل آزمون نمایشی و تحلیل شکل موج‌ها}
+
+\subsection{چرا یک فایل آزمون کوتاه‌تر ساخته شد؟}
+
+فایل آزمون جامع برای ارزیابی خودکار بسیار مناسب است، اما به دلیل وجود ۱۶ حالت آزمون هدفمند و ۲۰۰ عملیات تصادفی، شکل موج کامل آن شلوغ است. برای ارائۀ تصویری خواناتر، فایل \filename{stack_parametric_wave_tb.v} نوشته شد. این فایل جایگزین آزمون جامع نیست و هدف آن فقط نمایش واضح رخدادهای اصلی روی شکل موج است.
+
+روند این فایل به‌ترتیب زیر است:
+
+\begin{enumerate}[itemsep=0.3em]
+  \item اعمال بازنشانی و شروع از پشتهٔ خالی؛
+  \item درج داده تا پرشدن کامل پشته؛
+  \item یک درج اضافی در حالت پر برای نمایش حفاظت از مرز بالا؛
+  \item برداشت تمام عناصر و مشاهدهٔ ترتیب \lr{LIFO} تا فعال‌شدن \code{Empty}؛
+  \item یک برداشت اضافی در حالت خالی برای نمایش حفاظت از مرز پایین؛
+  \item بازنشانی دوباره؛
+  \item درج دو داده و سپس فعال‌کردن هم‌زمان درج و برداشت؛
+  \item برداشت عنصر جایگزین‌شده برای نمایش واضح تصمیم طراحی در حالت هم‌زمان.
+\end{enumerate}
+
+\subsection{شکل موج پشتهٔ پارامتری با عمق ۸ و پهنای ۴ بیت}
+
+\begin{figure}[H]
+  \centering
+  \reportimage{images/image17.png}
+  \caption{شکل موج نمایشی پشتهٔ پارامتری با عمق ۸ و پهنای ۴ بیت}
+  \label{fig:wave-8x4}
+\end{figure}
+
+در شکل \ref{fig:wave-8x4}، پس از پایان بازنشانی، درج‌های پیاپی انجام می‌شوند. داده‌های صفر تا هفت وارد پشته می‌شوند و پس از درج هشتم، پرچم \code{Full} فعال می‌شود. سپس مقدار \lr{F} در حالی روی ورودی قرار می‌گیرد که پشته پر است؛ چون درج در این وضعیت باید نادیده گرفته شود، ساختار پشته تغییر نمی‌کند.
+
+در مرحلۀ بعد، با فعال‌شدن \code{pop}، خروجی‌ها از ۷ تا صفر ظاهر می‌شوند که ترتیب معکوس درج را نشان می‌دهد. پس از برداشت آخرین عنصر، \code{Empty} فعال می‌شود. سپس یک برداشت اضافی در حالت خالی اجرا می‌شود که نباید اشاره‌گر را از صفر کمتر کند.
+
+در بخش پایانی شکل، پس از بازنشانی مجدد، مقادیر ۱ و ۲ درج می‌شوند. سپس با \code{Data_In=3} هر دو فرمان هم‌زمان فعال می‌شوند. در این لحظه مقدار ۲ به خروجی منتقل و رأس پشته با ۳ جایگزین می‌شود. برداشت بعدی نیز مقدار ۳ را نشان می‌دهد. بنابراین تصمیم طراحی حالت هم‌زمان به‌صورت مستقیم در شکل موج قابل مشاهده است.
+
+\subsection{شکل موج پشتهٔ پارامتری با عمق ۴ و پهنای ۲ بیت}
+
+\begin{figure}[H]
+  \centering
+  \reportimage{images/image18.png}
+  \caption{شکل موج نمایشی پشتهٔ پارامتری با عمق ۴ و پهنای ۲ بیت}
+  \label{fig:wave-4x2}
+\end{figure}
+
+شکل \ref{fig:wave-4x2} همان توالی منطقی را برای پشتهٔ کوچک‌تر نشان می‌دهد. این بار داده‌های دو بیتی \lr{00}، \lr{01}، \lr{10} و \lr{11} چهار خانۀ پشته را پر می‌کنند و \code{Full} پس از چهارمین درج فعال می‌شود. هنگام برداشت، خروجی‌ها به‌ترتیب \lr{11}، \lr{10}، \lr{01} و \lr{00} ظاهر می‌شوند و پس از آخرین برداشت، \code{Empty} فعال می‌شود. بخش پایانی نیز درج دو مقدار و عملیات هم‌زمان را با پهنای ۲ بیت نشان می‌دهد.
+
+مقایسۀ شکل‌های \ref{fig:wave-8x4} و \ref{fig:wave-4x2} نشان می‌دهد که منطق کنترلی بدون تغییر باقی مانده، اما تعداد چرخه‌های لازم برای رسیدن به مرز پرشدن و پهنای گذرگاه داده مطابق مشخّصه‌های پیمانه تغییر کرده است.
+
+\section{بحث و جمع‌بندی نتایج}
+
+نتایج به‌دست‌آمده سه جنبهٔ اصلی طراحی را تأیید می‌کنند:
+
+\begin{enumerate}[itemsep=0.4em]
+  \item \textbf{صحت منطق پشته:} فایل آزمون ثابت و فایل آزمون جامع، رفتار \lr{LIFO}، مرزهای پر و خالی، درج و برداشت نامعتبر، حالت سکون، بازنشانی ناهم‌زمان و عملیات هم‌زمان را بررسی کرده‌اند.
+  \item \textbf{صحت پارامتری‌سازی:} چهار پیکربندی متفاوت شامل عمق و پهنای اصلی، نسخۀ کوچک‌تر، پهنای بیشتر و عمق غیرتوانِ دو، همگی بدون تغییر الگوریتم داخلی آزمون‌ها را با موفقیت گذرانده‌اند.
+  \item \textbf{قابلیت سنتز:} هر دو نسخۀ ثابت و پارامتری در \lr{Quartus} با صفر خطا کامپایل شده‌اند و نماهای \lr{RTL}، پس از نگاشت و پس از جایابی و تطبیق برای آن‌ها تولید شده است. کاهش واضح اندازۀ شبکۀ سخت‌افزاری در پیکربندی \code{DEPTH=4, WIDTH=2} نیز نشان می‌دهد تغییر مشخّصه‌ها واقعاً در سخت‌افزار سنتزشده منعکس شده است.
+\end{enumerate}
+
+در نتیجه، طراحی نهایی خواستۀ اصلی آزمایش را برآورده می‌کند: یک پشتهٔ قابل سنتز که ابتدا با عمق ۸ و پهنای ۴ بیت پیاده‌سازی شده و سپس بدون تغییر ساختار داخلی به پیمانه‌ای با عمق و پهنای قابل تنظیم توسعه یافته است.
+
+\section{فایل‌های تحویلی}
+
+مطابق صورت آزمایش، فایل‌های کد کامنت‌گذاری‌شده و فایل‌های آزمون همراه گزارش تحویل می‌شوند. فایل‌های اصلی پروژه عبارت‌اند از:
+
+\begin{itemize}[itemsep=0.25em]
+  \item \filename{stack.v}: پشتهٔ ثابت با عمق ۸ و پهنای ۴ بیت؛
+  \item \filename{stack_tb.v}: فایل آزمون ۱۲ حالته برای نسخۀ ثابت؛
+  \item \filename{stack_parametric.v}: پشتهٔ پارامتری؛
+  \item \filename{stack_parametric_tb.v}: فایل آزمون جامع، خودبررسی\enfoot{Self-Checking} و دارای مدل مرجع؛
+  \item \filename{stack_parametric_wave_tb.v}: فایل آزمون کوتاه برای تولید شکل موج خوانا.
+\end{itemize}
+
+\end{document}
