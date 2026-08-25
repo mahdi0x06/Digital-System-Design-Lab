@@ -1,0 +1,44 @@
+\contentsline {section}{\numberline {1}هدف آزمایش}{3}{section.1}%
+\contentsline {section}{\numberline {2}شرح مسئله و قالب قاب \lr {UART}}{3}{section.2}%
+\contentsline {subsection}{\numberline {2.1}ساختار قاب}{3}{subsection.2.1}%
+\contentsline {subsection}{\numberline {2.2}زمان‌بندی انتقال}{4}{subsection.2.2}%
+\contentsline {section}{\numberline {3}طراحی فرستنده}{4}{section.3}%
+\contentsline {subsection}{\numberline {3.1}ساختار ماشین حالت فرستنده}{4}{subsection.3.1}%
+\contentsline {subsection}{\numberline {3.2}کد \lr {Verilog} فرستنده}{5}{subsection.3.2}%
+\contentsline {section}{\numberline {4}طراحی گیرنده}{10}{section.4}%
+\contentsline {subsection}{\numberline {4.1}ساختار ماشین حالت گیرنده}{10}{subsection.4.1}%
+\contentsline {subsection}{\numberline {4.2}کد \lr {Verilog} گیرنده}{11}{subsection.4.2}%
+\contentsline {section}{\numberline {5}پیمانهٔ سطح بالا و اتصال بازگشت مستقیم}{15}{section.5}%
+\contentsline {subsection}{\numberline {5.1}کد \lr {Verilog} پیمانۀ سطح بالا}{15}{subsection.5.1}%
+\contentsline {section}{\numberline {6}سنتز و مشاهدۀ ساختار در \lr {Quartus}}{17}{section.6}%
+\contentsline {subsection}{\numberline {6.1}روند انجام کار در \lr {Quartus}}{17}{subsection.6.1}%
+\contentsline {subsection}{\numberline {6.2}نمای \lr {RTL} فرستنده}{18}{subsection.6.2}%
+\contentsline {subsection}{\numberline {6.3}نمای \lr {RTL} گیرنده}{19}{subsection.6.3}%
+\contentsline {subsection}{\numberline {6.4}نمای \lr {RTL} پیمانۀ سطح بالا}{20}{subsection.6.4}%
+\contentsline {section}{\numberline {7}طراحی فایل آزمون}{20}{section.7}%
+\contentsline {subsection}{\numberline {7.1}هدف و ساختار فایل \lr {Testbench}}{20}{subsection.7.1}%
+\contentsline {subsection}{\numberline {7.2}تولید ساعت، بازنشانی و ثبت شکل موج}{21}{subsection.7.2}%
+\contentsline {subsection}{\numberline {7.3}وظایف کمکی و خودآزمایی}{21}{subsection.7.3}%
+\contentsline {section}{\numberline {8}سناریوهای آزمون و حالت‌های مرزی}{21}{section.8}%
+\contentsline {subsection}{\numberline {8.1}آزمون ۱: بازنشانی و حالت بی‌کار}{21}{subsection.8.1}%
+\contentsline {subsection}{\numberline {8.2}آزمون ۲: دریافت صحیح، قالب قاب و زمان‌بندی سیگنال busy}{22}{subsection.8.2}%
+\contentsline {subsection}{\numberline {8.3}آزمون ۳: خطای توازن}{22}{subsection.8.3}%
+\contentsline {subsection}{\numberline {8.4}آزمون ۴: خطای بیت توقف}{22}{subsection.8.4}%
+\contentsline {subsection}{\numberline {8.5}آزمون ۵: ارسال چند قاب پشت‌سرهم}{22}{subsection.8.5}%
+\contentsline {subsection}{\numberline {8.6}آزمون ۶: حداقل داده}{22}{subsection.8.6}%
+\contentsline {subsection}{\numberline {8.7}آزمون ۷: حداکثر داده}{23}{subsection.8.7}%
+\contentsline {subsection}{\numberline {8.8}آزمون ۸: فعال‌سازی \lr {new\_data} هنگام مشغول بودن فرستنده}{23}{subsection.8.8}%
+\contentsline {subsection}{\numberline {8.9}آزمون ۹: بازنشانی ناهم‌زمان در میانهٔ انتقال و بازیابی}{23}{subsection.8.9}%
+\contentsline {subsection}{\numberline {8.10}آزمون ۱۰: رد شروع کاذب و بازیابی گیرنده}{23}{subsection.8.10}%
+\contentsline {subsection}{\numberline {8.11}آزمون ۱۱: پیمایش جامع تمام ۱۲۸ مقدار داده}{23}{subsection.8.11}%
+\contentsline {section}{\numberline {9}شکل موج‌های منتخب و تحلیل آن‌ها}{24}{section.9}%
+\contentsline {subsection}{\numberline {9.1}شکل موج آزمون دریافت صحیح، \lr {test\_id=2}}{24}{subsection.9.1}%
+\contentsline {subsection}{\numberline {9.2}شکل موج آزمون خطای parity، \lr {test\_id=3}}{25}{subsection.9.2}%
+\contentsline {subsection}{\numberline {9.3}شکل موج آزمون خطای بیت توقف، \lr {test\_id=4}}{25}{subsection.9.3}%
+\contentsline {subsection}{\numberline {9.4}شکل موج آزمون ارسال چند قاب، \lr {test\_id=5}}{26}{subsection.9.4}%
+\contentsline {subsection}{\numberline {9.5}شکل موج آزمون نادیده‌گرفتن \lr {new\_data} هنگام \lr {busy}، \lr {test\_id=8}}{27}{subsection.9.5}%
+\contentsline {subsection}{\numberline {9.6}شکل موج آزمون بازنشانی میانهٔ انتقال، \lr {test\_id=9}}{28}{subsection.9.6}%
+\contentsline {subsection}{\numberline {9.7}توضیح کلی شکل موج‌ها}{29}{subsection.9.7}%
+\contentsline {section}{\numberline {10}خروجی نهایی فایل آزمون}{29}{section.10}%
+\contentsline {section}{\numberline {11}تحلیل نتایج و جمع‌بندی}{30}{section.11}%
+\contentsline {section}{\numberline {12}فایل‌های تحویلی}{31}{section.12}%

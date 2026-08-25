@@ -1,0 +1,39 @@
+// Format: {1'b0, Opcode[2:0], A_real[7:0], A_imag[7:0], B_real[7:0], B_imag[7:0]} (in Hex)
+
+// 1. Addition of two positive complex numbers: (2 + j3) + (4 + j1) = (6 + j4)
+// Opcode=000, A=02_03, B=04_01 -> 0_000_00000010_00000011_00000100_00000001 = 0_02030401 (Hex)
+002030401
+
+// 2. Addition of two negative complex numbers: (-5 - j2) + (-1 - j3) = (-6 - j5)
+// A_real(-5)=FB, A_imag(-2)=FE, B_real(-1)=FF, B_imag(-3)=FD
+// Opcode=000 -> 0_000_11111011_11111110_11111111_11111101 -> 0FBFEFFFD
+0FBFEFFFD
+
+// 3. Subtraction with a negative result: (3 + j2) - (8 + j5) = (-5 - j3)
+// Opcode=001 (1), A=03_02, B=08_05 -> 0_001_00000011_00000010_00001000_00000101 -> 103020805
+103020805
+
+// 4. Multiplication of positive and negative complex numbers: (2 - j3) * (-1 + j4) = 10 + j11
+// Opcode=010 (2), A_real(2)=02, A_imag(-3)=FD, B_real(-1)=FF, B_imag(4)=04 -> 202FDFF04
+202FDFF04
+
+// 5. Complex conjugate: (4 + j7) -> (4 - j7)
+// Opcode=011 (3), A=04_07, B=00_00 -> 304070000
+304070000
+
+// 6. Magnitude squared: |3 - j4|^2 = 9 + 16 = 25
+// Opcode=100 (4), A=03_FC, B=00_00 -> 403FC0000
+403FC0000
+
+// 7. Checking zero output and Zero flag: (5 + j5) - (5 + j5) = 0 + j0
+// Opcode=001 (1), A=05_05, B=05_05 -> 105050505
+105050505
+
+// 8. Boundary check and Overflow in addition: (100 + j100) + (100 + j100) 
+// In 8-bit signed format, the maximum value is 127. 100+100 equals 200, which causes an overflow.
+// 100 = 64 (Hex). Opcode=000 -> 064646464
+064646464
+
+// 9. NOP and HALT execution
+// Opcode=101 (5), data=0 -> 500000000
+500000000

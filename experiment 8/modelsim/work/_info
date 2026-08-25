@@ -1,0 +1,327 @@
+m255
+K4
+z2
+!s11f vlog 2020.4 2020.10, Oct 13 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/modeltech64_2020.4/examples/DSD/az8
+T_opt
+!s110 1787309315
+VVklVWZ<K2BOaRle6Bz7Y23
+04 7 4 work tb_Conj fast 0
+=1-107c61baa88f-6a882d03-b1-5008
+Z1 o-quiet -auto_acc_if_foreign -work work +acc
+Z2 tCvgOpt 0
+n@_opt
+Z3 OL;O;2020.4;71
+R0
+T_opt1
+!s110 1787309379
+Ve=29aKZ?>f4:zlkkAN?Fd2
+04 7 4 work tb_Mag2 fast 0
+=1-107c61baa88f-6a882d43-c1-5cdc
+R1
+R2
+n@_opt1
+R3
+R0
+T_opt2
+!s110 1787309981
+V7_gnIDKGkcNc@ZBkMkJ0e2
+04 2 4 work tb fast 0
+=1-107c61baa88f-6a882f9c-3d0-6bb0
+R1
+R2
+n@_opt2
+R3
+vAddSub
+Z4 !s110 1787257188
+!i10b 1
+!s100 ]WU:1`9Jb>=M]TFMhfMCN0
+Z5 !s11b Dg1SIo80bB@j0V0VzS_@n1
+I7lCE=B68c:AKoK_jPM5Xe0
+Z6 dC:/modeltech64_2020.4/examples/DSD/az8_real
+Z7 w1787256321
+8E:/az8/verilog/AddSub.v
+FE:/az8/verilog/AddSub.v
+!i122 8
+L0 1 17
+Z8 VDg1SIo80bB@j0V0VzS_@n1
+Z9 OL;L;2020.4;71
+r1
+!s85 0
+31
+Z10 !s108 1787257188.000000
+!s107 E:/az8/verilog/AddSub.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|E:/az8/verilog/AddSub.v|
+!i113 0
+Z11 o-work work -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R2
+n@add@sub
+vConj
+R4
+!i10b 1
+!s100 8U3XS5[UfQo=4j_5_L1dQ3
+R5
+IJQo3jij9;Vg2i=C5U0^5H3
+R6
+Z12 w1787256320
+8E:/az8/verilog/Conj.v
+FE:/az8/verilog/Conj.v
+!i122 9
+L0 1 14
+R8
+R9
+r1
+!s85 0
+31
+R10
+!s107 E:/az8/verilog/Conj.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|E:/az8/verilog/Conj.v|
+!i113 0
+R11
+R2
+n@conj
+vControlUnit
+R4
+!i10b 1
+!s100 ZF2FNdzQ_iEKfNjm55@A11
+R5
+I]aUCJLOjLo6I1kICng<@k2
+R6
+Z13 w1787256319
+8E:/az8/verilog/ControlUnit.v
+FE:/az8/verilog/ControlUnit.v
+!i122 10
+L0 1 215
+R8
+R9
+r1
+!s85 0
+31
+R10
+!s107 E:/az8/verilog/ControlUnit.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|E:/az8/verilog/ControlUnit.v|
+!i113 0
+R11
+R2
+n@control@unit
+vDatapath
+Z14 !s110 1787257189
+!i10b 1
+!s100 P:Pnga>SXJCReB1Zli0Ti1
+R5
+IU6=BFFQ39U;oG<JO<X:^^0
+R6
+w1787256322
+8E:/az8/verilog/Datapath.v
+FE:/az8/verilog/Datapath.v
+!i122 11
+L0 1 145
+R8
+R9
+r1
+!s85 0
+31
+R10
+!s107 E:/az8/verilog/Datapath.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|E:/az8/verilog/Datapath.v|
+!i113 0
+R11
+R2
+n@datapath
+vMag2
+R14
+!i10b 1
+!s100 PZjzQA62e;<m1BNT6[VD93
+R5
+Il@Geb5C:[JfXV2o`7oCle1
+R6
+R12
+8E:/az8/verilog/Mag2.v
+FE:/az8/verilog/Mag2.v
+!i122 12
+L0 1 11
+R8
+R9
+r1
+!s85 0
+31
+Z15 !s108 1787257189.000000
+!s107 E:/az8/verilog/Mag2.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|E:/az8/verilog/Mag2.v|
+!i113 0
+R11
+R2
+n@mag2
+vMul
+R14
+!i10b 1
+!s100 UX6==1W3KB?g_eQAie[n[0
+R5
+IUEf^Ek^8f8k3ezAh8SlaB3
+R6
+R7
+8E:/az8/verilog/Mul.v
+FE:/az8/verilog/Mul.v
+!i122 13
+L0 1 7
+R8
+R9
+r1
+!s85 0
+31
+R15
+!s107 E:/az8/verilog/Mul.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|E:/az8/verilog/Mul.v|
+!i113 0
+R11
+R2
+n@mul
+vtb
+R14
+!i10b 1
+!s100 48<7IXLZ@mhgE_KCCVMA03
+R5
+I`c?B@c_WE1P>YDZV@L7[I1
+R6
+w1787231771
+8E:/az8/verilog/tb.v
+FE:/az8/verilog/tb.v
+!i122 14
+L0 3 53
+R8
+R9
+r1
+!s85 0
+31
+R15
+!s107 E:/az8/verilog/tb.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|E:/az8/verilog/tb.v|
+!i113 0
+R11
+R2
+vtb_AddSub
+R14
+!i10b 1
+!s100 gKi5j]ITHTn@R1K`7X@b;1
+R5
+IE05F^<c<BgA<D<^QUdG[N0
+R6
+w1787257089
+8E:/az8/verilog/tb_AddSub.v
+FE:/az8/verilog/tb_AddSub.v
+!i122 16
+L0 3 36
+R8
+R9
+r1
+!s85 0
+31
+R15
+!s107 E:/az8/verilog/tb_AddSub.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|E:/az8/verilog/tb_AddSub.v|
+!i113 0
+R11
+R2
+ntb_@add@sub
+vtb_Conj
+R14
+!i10b 1
+!s100 MBGC2S=`h1zLciJz6NTK[3
+R5
+IZcbB<Pn9f[[cAc`R0Ti`C0
+R6
+w1787257117
+8E:/az8/verilog/tb_Conj.v
+FE:/az8/verilog/tb_Conj.v
+!i122 17
+L0 3 40
+R8
+R9
+r1
+!s85 0
+31
+R15
+!s107 E:/az8/verilog/tb_Conj.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|E:/az8/verilog/tb_Conj.v|
+!i113 0
+R11
+R2
+ntb_@conj
+vtb_Mag2
+R14
+!i10b 1
+!s100 <GH_J;Ta965i;jf9@>Bl>3
+R5
+I4Y;7TnFz7Yl6OZ?T^cTVZ3
+R6
+w1787257130
+8E:/az8/verilog/tb_Mag2.v
+FE:/az8/verilog/tb_Mag2.v
+!i122 18
+L0 3 38
+R8
+R9
+r1
+!s85 0
+31
+R15
+!s107 E:/az8/verilog/tb_Mag2.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|E:/az8/verilog/tb_Mag2.v|
+!i113 0
+R11
+R2
+ntb_@mag2
+vtb_Mul
+R14
+!i10b 1
+!s100 dI=gm8zzR1PIi43Q;df143
+R5
+Ij:8hk@LCFRTB5TbkZg`TQ3
+R6
+w1787257105
+8E:/az8/verilog/tb_Mul.v
+FE:/az8/verilog/tb_Mul.v
+!i122 19
+L0 3 33
+R8
+R9
+r1
+!s85 0
+31
+R15
+!s107 E:/az8/verilog/tb_Mul.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|E:/az8/verilog/tb_Mul.v|
+!i113 0
+R11
+R2
+ntb_@mul
+vTop
+R14
+!i10b 1
+!s100 m:oQ3_>_F^VfP63lejo><2
+R5
+IFGLe_KAgX5AnLjDaF7OOL2
+R6
+R13
+8E:/az8/verilog/Top.v
+FE:/az8/verilog/Top.v
+!i122 15
+L0 1 167
+R8
+R9
+r1
+!s85 0
+31
+R15
+!s107 E:/az8/verilog/Top.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|E:/az8/verilog/Top.v|
+!i113 0
+R11
+R2
+n@top

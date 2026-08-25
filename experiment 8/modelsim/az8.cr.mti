@@ -1,0 +1,85 @@
+E:/az8/verilog/tb.v {1 {vlog -work work -vopt -stats=none E:/az8/verilog/tb.v
+Model Technology ModelSim SE-64 vlog 2020.4 Compiler 2020.10 Oct 13 2020
+-- Compiling module tb
+
+Top level modules:
+	tb
+
+} {} {}} E:/az8/verilog/Datapath.v {1 {vlog -work work -vopt -stats=none E:/az8/verilog/Datapath.v
+Model Technology ModelSim SE-64 vlog 2020.4 Compiler 2020.10 Oct 13 2020
+-- Compiling module Datapath
+
+Top level modules:
+	Datapath
+
+} {} {}} E:/az8/verilog/Mag2.v {1 {vlog -work work -vopt -stats=none E:/az8/verilog/Mag2.v
+Model Technology ModelSim SE-64 vlog 2020.4 Compiler 2020.10 Oct 13 2020
+-- Compiling module Mag2
+
+Top level modules:
+	Mag2
+
+} {} {}} E:/az8/verilog/ControlUnit.v {1 {vlog -work work -vopt -stats=none E:/az8/verilog/ControlUnit.v
+Model Technology ModelSim SE-64 vlog 2020.4 Compiler 2020.10 Oct 13 2020
+-- Compiling module ControlUnit
+
+Top level modules:
+	ControlUnit
+
+} {} {}} E:/az8/verilog/Mul.v {1 {vlog -work work -vopt -stats=none E:/az8/verilog/Mul.v
+Model Technology ModelSim SE-64 vlog 2020.4 Compiler 2020.10 Oct 13 2020
+-- Compiling module Mul
+
+Top level modules:
+	Mul
+
+} {} {}} E:/az8/verilog/tb_Conj.v {1 {vlog -work work -vopt -stats=none E:/az8/verilog/tb_Conj.v
+Model Technology ModelSim SE-64 vlog 2020.4 Compiler 2020.10 Oct 13 2020
+-- Compiling module tb_Conj
+
+Top level modules:
+	tb_Conj
+
+} {} {}} E:/az8/verilog/tb_AddSub.v {1 {vlog -work work -vopt -stats=none E:/az8/verilog/tb_AddSub.v
+Model Technology ModelSim SE-64 vlog 2020.4 Compiler 2020.10 Oct 13 2020
+-- Compiling module tb_AddSub
+
+Top level modules:
+	tb_AddSub
+
+} {} {}} E:/az8/verilog/Conj.v {1 {vlog -work work -vopt -stats=none E:/az8/verilog/Conj.v
+Model Technology ModelSim SE-64 vlog 2020.4 Compiler 2020.10 Oct 13 2020
+-- Compiling module Conj
+
+Top level modules:
+	Conj
+
+} {} {}} E:/az8/verilog/AddSub.v {1 {vlog -work work -vopt -stats=none E:/az8/verilog/AddSub.v
+Model Technology ModelSim SE-64 vlog 2020.4 Compiler 2020.10 Oct 13 2020
+-- Compiling module AddSub
+
+Top level modules:
+	AddSub
+
+} {} {}} E:/az8/verilog/Top.v {1 {vlog -work work -vopt -stats=none E:/az8/verilog/Top.v
+Model Technology ModelSim SE-64 vlog 2020.4 Compiler 2020.10 Oct 13 2020
+-- Compiling module Top
+
+Top level modules:
+	Top
+
+} {} {}} E:/az8/verilog/tb_Mul.v {1 {vlog -work work -vopt -stats=none E:/az8/verilog/tb_Mul.v
+Model Technology ModelSim SE-64 vlog 2020.4 Compiler 2020.10 Oct 13 2020
+-- Compiling module tb_Mul
+
+Top level modules:
+	tb_Mul
+
+} {} {}} E:/az8/verilog/tb_Mag2.v {1 {vlog -work work -vopt -stats=none E:/az8/verilog/tb_Mag2.v
+Model Technology ModelSim SE-64 vlog 2020.4 Compiler 2020.10 Oct 13 2020
+-- Compiling module tb_Mag2
+
+Top level modules:
+	tb_Mag2
+
+} {} {}}

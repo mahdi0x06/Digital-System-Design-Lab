@@ -1,0 +1,8 @@
+<?xml version="1.0" ?>
+<LOG_ROOT>
+	<PROJECT NAME="az8">
+		<CBX_INST_ENTRY INSTANCE_NAME="|Top|Datapath:dp|Mul:mult_unit|lpm_mult:Mult0" CBX_FILE_NAME="mult_17t.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|Top|Datapath:dp|Mul:mult_unit|lpm_mult:Mult0|mult_17t:auto_generated|alt_mac_mult:mac_mult1" CBX_FILE_NAME="mac_mult_jah1.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|Top|Datapath:dp|Mul:mult_unit|lpm_mult:Mult0|mult_17t:auto_generated|alt_mac_out:mac_out2" CBX_FILE_NAME="mac_out_ov82.tdf"/>
+	</PROJECT>
+</LOG_ROOT>
