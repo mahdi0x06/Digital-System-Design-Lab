@@ -1,0 +1,1136 @@
+$date
+	Sat Sep 12 12:14:20 2026
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ps
+$end
+$scope module stack_cpu_tb $end
+$var wire 8 ! memory_read_data [7:0] $end
+$var wire 1 " memory_write_enable $end
+$var wire 8 # memory_write_data [7:0] $end
+$var wire 8 $ memory_address [7:0] $end
+$var reg 1 % clk $end
+$var reg 1 & reset $end
+$var integer 32 ' failed_tests [31:0] $end
+$var integer 32 ( i [31:0] $end
+$var integer 32 ) passed_tests [31:0] $end
+$scope module dut $end
+$var wire 1 % clk $end
+$var wire 8 * memory_read_data [7:0] $end
+$var wire 1 & reset $end
+$var wire 8 + sub_result [7:0] $end
+$var wire 8 , stack_top [7:0] $end
+$var wire 8 - stack_second [7:0] $end
+$var wire 4 . opcode [3:0] $end
+$var wire 8 / add_result [7:0] $end
+$var parameter 4 0 OP_ADD $end
+$var parameter 4 1 OP_CMP $end
+$var parameter 4 2 OP_JS $end
+$var parameter 4 3 OP_JUMP $end
+$var parameter 4 4 OP_JZ $end
+$var parameter 4 5 OP_POP $end
+$var parameter 4 6 OP_PUSH $end
+$var parameter 4 7 OP_PUSHC $end
+$var parameter 4 8 OP_SHL $end
+$var parameter 4 9 OP_SUB $end
+$var parameter 4 : OP_SWAP $end
+$var parameter 4 ; STATE_ADD $end
+$var parameter 4 < STATE_CMP $end
+$var parameter 4 = STATE_DECODE $end
+$var parameter 4 > STATE_FETCH $end
+$var parameter 4 ? STATE_FETCH_OPERAND $end
+$var parameter 4 @ STATE_JS $end
+$var parameter 4 A STATE_JUMP $end
+$var parameter 4 B STATE_JZ $end
+$var parameter 4 C STATE_POP $end
+$var parameter 4 D STATE_PUSH $end
+$var parameter 4 E STATE_PUSHC $end
+$var parameter 4 F STATE_SHL $end
+$var parameter 4 G STATE_SUB $end
+$var parameter 4 H STATE_SWAP $end
+$var reg 8 I instruction_register [7:0] $end
+$var reg 8 J memory_address [7:0] $end
+$var reg 8 K memory_write_data [7:0] $end
+$var reg 1 " memory_write_enable $end
+$var reg 8 L operand_register [7:0] $end
+$var reg 8 M program_counter [7:0] $end
+$var reg 1 N sign_flag $end
+$var reg 4 O stack_pointer [3:0] $end
+$var reg 4 P state [3:0] $end
+$var reg 1 Q zero_flag $end
+$var integer 32 R i [31:0] $end
+$upscope $end
+$scope task clear_memory $end
+$upscope $end
+$scope task start_cpu $end
+$upscope $end
+$scope task test_cmp $end
+$var reg 1 S expected_sign $end
+$var reg 1 T expected_zero $end
+$var reg 8 U value_a [7:0] $end
+$var reg 8 V value_b [7:0] $end
+$upscope $end
+$scope task test_shl $end
+$var reg 8 W expected_value [7:0] $end
+$var reg 8 X input_value [7:0] $end
+$upscope $end
+$scope task test_swap $end
+$upscope $end
+$scope task wait_for_fetch $end
+$var reg 8 Y expected_pc [7:0] $end
+$var integer 32 Z timeout [31:0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+b1011 H
+b1010 G
+b1100 F
+b11 E
+b100 D
+b101 C
+b111 B
+b110 A
+b1000 @
+b10 ?
+b0 >
+b1 =
+b1101 <
+b1001 ;
+b1000 :
+b111 9
+b1001 8
+b0 7
+b1 6
+b10 5
+b100 4
+b11 3
+b101 2
+b1010 1
+b110 0
+$end
+#0
+$dumpvars
+bx Z
+bx Y
+bx X
+bx W
+bx V
+bx U
+xT
+xS
+b1000 R
+0Q
+b0 P
+b0 O
+0N
+b0 M
+b0 L
+b0 K
+b0 J
+b0 I
+b0 /
+b0 .
+b0 -
+b0 ,
+b0 +
+b0 *
+b0 )
+b100000000 (
+b0 '
+1&
+0%
+b0 $
+b0 #
+0"
+b0 !
+$end
+#5000
+b1000 R
+1%
+#10000
+0%
+#15000
+b1000 R
+1%
+#20000
+b0 Z
+b101 Y
+0&
+0%
+#25000
+b10010 !
+b10010 *
+b1 $
+b1 J
+b1 P
+b1 M
+1%
+#26000
+b1 Z
+#30000
+0%
+#35000
+b10 P
+1%
+#36000
+b10 Z
+#40000
+0%
+#45000
+b0 !
+b0 *
+b10 $
+b10 J
+b11 P
+b10 M
+b10010 L
+1%
+#46000
+b11 Z
+#50000
+0%
+#55000
+b10010 /
+b11101110 +
+b10010 ,
+b0 P
+b1 O
+1%
+#56000
+b100 Z
+#60000
+0%
+#65000
+b10100101 !
+b10100101 *
+b11 $
+b11 J
+b1 P
+b11 M
+1%
+#66000
+b101 Z
+#70000
+0%
+#75000
+b10 P
+1%
+#76000
+b110 Z
+#80000
+0%
+#85000
+b1000 !
+b1000 *
+b100 $
+b100 J
+b11 P
+b100 M
+b10100101 L
+1%
+#86000
+b111 Z
+#90000
+0%
+#95000
+b10100101 ,
+b10110111 /
+b1101101 +
+b10010 -
+b0 P
+b10 O
+1%
+#96000
+b1000 Z
+#100000
+0%
+#105000
+b0 !
+b0 *
+b101 $
+b101 J
+b1000 .
+b1 P
+b101 M
+b1000 I
+1%
+#106000
+b1001 Z
+#110000
+0%
+#115000
+b1011 P
+1%
+#116000
+b1010 Z
+#120000
+0%
+#125000
+b10100101 -
+b10110111 /
+b10010011 +
+b10010 ,
+b0 P
+1%
+#126000
+b0 ,
+b0 /
+b0 +
+b0 -
+b0 .
+b0 $
+b0 J
+b0 O
+b0 L
+b0 I
+b0 M
+b1000 R
+b100000000 (
+1&
+b0 W
+b0 X
+b1 )
+b1011 Z
+#130000
+0%
+#135000
+b1000 R
+1%
+#140000
+0%
+#145000
+b1000 R
+1%
+#150000
+b0 Z
+b11 Y
+0&
+0%
+#155000
+b1 $
+b1 J
+b1 P
+b1 M
+1%
+#156000
+b1 Z
+#160000
+0%
+#165000
+b10 P
+1%
+#166000
+b10 Z
+#170000
+0%
+#175000
+b1001 !
+b1001 *
+b10 $
+b10 J
+b11 P
+b10 M
+1%
+#176000
+b11 Z
+#180000
+0%
+#185000
+b0 P
+b1 O
+1%
+#186000
+b100 Z
+#190000
+0%
+#195000
+b0 !
+b0 *
+b11 $
+b11 J
+b1001 .
+b1 P
+b11 M
+b1001 I
+1%
+#196000
+b101 Z
+#200000
+0%
+#205000
+b1100 P
+1%
+#206000
+b110 Z
+#210000
+0%
+#215000
+b0 P
+1%
+#216000
+b0 .
+b0 $
+b0 J
+b0 O
+b0 I
+b0 M
+b1000 R
+b100000000 (
+1&
+b10 W
+b1 X
+b10 )
+b111 Z
+#220000
+0%
+#225000
+b1000 R
+1%
+#230000
+0%
+#235000
+b1000 R
+1%
+#240000
+b0 Z
+0&
+0%
+#245000
+b1 !
+b1 *
+b1 $
+b1 J
+b1 P
+b1 M
+1%
+#246000
+b1 Z
+#250000
+0%
+#255000
+b10 P
+1%
+#256000
+b10 Z
+#260000
+0%
+#265000
+b1001 !
+b1001 *
+b10 $
+b10 J
+b11 P
+b10 M
+b1 L
+1%
+#266000
+b11 Z
+#270000
+0%
+#275000
+b1 /
+b11111111 +
+b1 ,
+b0 P
+b1 O
+1%
+#276000
+b100 Z
+#280000
+0%
+#285000
+b0 !
+b0 *
+b11 $
+b11 J
+b1001 .
+b1 P
+b11 M
+b1001 I
+1%
+#286000
+b101 Z
+#290000
+0%
+#295000
+b1100 P
+1%
+#296000
+b110 Z
+#300000
+0%
+#305000
+b10 /
+b11111110 +
+b10 ,
+b0 P
+1%
+#306000
+b0 /
+b0 +
+b0 ,
+b0 .
+b0 $
+b0 J
+b0 O
+b0 L
+b0 I
+b0 M
+b1000 R
+b100000000 (
+1&
+b1111110 W
+b111111 X
+b11 )
+b111 Z
+#310000
+0%
+#315000
+b1000 R
+1%
+#320000
+0%
+#325000
+b1000 R
+1%
+#330000
+b0 Z
+0&
+0%
+#335000
+b111111 !
+b111111 *
+b1 $
+b1 J
+b1 P
+b1 M
+1%
+#336000
+b1 Z
+#340000
+0%
+#345000
+b10 P
+1%
+#346000
+b10 Z
+#350000
+0%
+#355000
+b1001 !
+b1001 *
+b10 $
+b10 J
+b11 P
+b10 M
+b111111 L
+1%
+#356000
+b11 Z
+#360000
+0%
+#365000
+b111111 /
+b11000001 +
+b111111 ,
+b0 P
+b1 O
+1%
+#366000
+b100 Z
+#370000
+0%
+#375000
+b0 !
+b0 *
+b11 $
+b11 J
+b1001 .
+b1 P
+b11 M
+b1001 I
+1%
+#376000
+b101 Z
+#380000
+0%
+#385000
+b1100 P
+1%
+#386000
+b110 Z
+#390000
+0%
+#395000
+b1111110 /
+b10000010 +
+b1111110 ,
+b0 P
+1%
+#396000
+b0 /
+b0 +
+b0 ,
+b0 .
+b0 $
+b0 J
+b0 O
+b0 L
+b0 I
+b0 M
+b1000 R
+b100000000 (
+1&
+b11111110 W
+b1111111 X
+b100 )
+b111 Z
+#400000
+0%
+#405000
+b1000 R
+1%
+#410000
+0%
+#415000
+b1000 R
+1%
+#420000
+b0 Z
+0&
+0%
+#425000
+b1111111 !
+b1111111 *
+b1 $
+b1 J
+b1 P
+b1 M
+1%
+#426000
+b1 Z
+#430000
+0%
+#435000
+b10 P
+1%
+#436000
+b10 Z
+#440000
+0%
+#445000
+b1001 !
+b1001 *
+b10 $
+b10 J
+b11 P
+b10 M
+b1111111 L
+1%
+#446000
+b11 Z
+#450000
+0%
+#455000
+b1111111 /
+b10000001 +
+b1111111 ,
+b0 P
+b1 O
+1%
+#456000
+b100 Z
+#460000
+0%
+#465000
+b0 !
+b0 *
+b11 $
+b11 J
+b1001 .
+b1 P
+b11 M
+b1001 I
+1%
+#466000
+b101 Z
+#470000
+0%
+#475000
+b1100 P
+1%
+#476000
+b110 Z
+#480000
+0%
+#485000
+b11111110 /
+b10 +
+b11111110 ,
+b0 P
+1%
+#486000
+b0 /
+b0 +
+b0 ,
+b0 .
+b0 $
+b0 J
+b0 O
+b0 L
+b0 I
+b0 M
+b1000 R
+b0 !
+b0 *
+b100000000 (
+1&
+1S
+0T
+b1001 U
+b101 V
+b101 )
+b111 Z
+#490000
+0%
+#495000
+b1000 R
+1%
+#500000
+0%
+#505000
+b1000 R
+1%
+#510000
+b0 Z
+b101 Y
+0&
+0%
+#515000
+b101 !
+b101 *
+b1 $
+b1 J
+b1 P
+b1 M
+1%
+#516000
+b1 Z
+#520000
+0%
+#525000
+b10 P
+1%
+#526000
+b10 Z
+#530000
+0%
+#535000
+b0 !
+b0 *
+b10 $
+b10 J
+b11 P
+b10 M
+b101 L
+1%
+#536000
+b11 Z
+#540000
+0%
+#545000
+b101 /
+b11111011 +
+b101 ,
+b0 P
+b1 O
+1%
+#546000
+b100 Z
+#550000
+0%
+#555000
+b1001 !
+b1001 *
+b11 $
+b11 J
+b1 P
+b11 M
+1%
+#556000
+b101 Z
+#560000
+0%
+#565000
+b10 P
+1%
+#566000
+b110 Z
+#570000
+0%
+#575000
+b1010 !
+b1010 *
+b100 $
+b100 J
+b11 P
+b100 M
+b1001 L
+1%
+#576000
+b111 Z
+#580000
+0%
+#585000
+b1001 ,
+b1110 /
+b11111100 +
+b101 -
+b0 P
+b10 O
+1%
+#586000
+b1000 Z
+#590000
+0%
+#595000
+b0 !
+b0 *
+b101 $
+b101 J
+b1010 .
+b1 P
+b101 M
+b1010 I
+1%
+#596000
+b1001 Z
+#600000
+0%
+#605000
+b1101 P
+1%
+#606000
+b1010 Z
+#610000
+0%
+#615000
+b0 P
+1N
+1%
+#616000
+b0 ,
+b0 /
+b0 +
+b0 -
+b0 .
+b0 $
+b0 J
+0N
+b0 O
+b0 L
+b0 I
+b0 M
+b1000 R
+b100000000 (
+1&
+0S
+1T
+b111 U
+b111 V
+b110 )
+b1011 Z
+#620000
+0%
+#625000
+b1000 R
+1%
+#630000
+0%
+#635000
+b1000 R
+1%
+#640000
+b0 Z
+0&
+0%
+#645000
+b111 !
+b111 *
+b1 $
+b1 J
+b1 P
+b1 M
+1%
+#646000
+b1 Z
+#650000
+0%
+#655000
+b10 P
+1%
+#656000
+b10 Z
+#660000
+0%
+#665000
+b0 !
+b0 *
+b10 $
+b10 J
+b11 P
+b10 M
+b111 L
+1%
+#666000
+b11 Z
+#670000
+0%
+#675000
+b111 /
+b11111001 +
+b111 ,
+b0 P
+b1 O
+1%
+#676000
+b100 Z
+#680000
+0%
+#685000
+b111 !
+b111 *
+b11 $
+b11 J
+b1 P
+b11 M
+1%
+#686000
+b101 Z
+#690000
+0%
+#695000
+b10 P
+1%
+#696000
+b110 Z
+#700000
+0%
+#705000
+b1010 !
+b1010 *
+b100 $
+b100 J
+b11 P
+b100 M
+1%
+#706000
+b111 Z
+#710000
+0%
+#715000
+b1110 /
+b0 +
+b111 -
+b0 P
+b10 O
+1%
+#716000
+b1000 Z
+#720000
+0%
+#725000
+b0 !
+b0 *
+b101 $
+b101 J
+b1010 .
+b1 P
+b101 M
+b1010 I
+1%
+#726000
+b1001 Z
+#730000
+0%
+#735000
+b1101 P
+1%
+#736000
+b1010 Z
+#740000
+0%
+#745000
+b0 P
+1Q
+1%
+#746000
+b0 ,
+b0 /
+b0 +
+b0 -
+b0 .
+b0 $
+b0 J
+0Q
+b0 O
+b0 L
+b0 I
+b0 M
+b1000 R
+b100000000 (
+1&
+0T
+b101 U
+b1001 V
+b111 )
+b1011 Z
+#750000
+0%
+#755000
+b1000 R
+1%
+#760000
+0%
+#765000
+b1000 R
+1%
+#770000
+b0 Z
+0&
+0%
+#775000
+b1001 !
+b1001 *
+b1 $
+b1 J
+b1 P
+b1 M
+1%
+#776000
+b1 Z
+#780000
+0%
+#785000
+b10 P
+1%
+#786000
+b10 Z
+#790000
+0%
+#795000
+b0 !
+b0 *
+b10 $
+b10 J
+b11 P
+b10 M
+b1001 L
+1%
+#796000
+b11 Z
+#800000
+0%
+#805000
+b1001 /
+b11110111 +
+b1001 ,
+b0 P
+b1 O
+1%
+#806000
+b100 Z
+#810000
+0%
+#815000
+b101 !
+b101 *
+b11 $
+b11 J
+b1 P
+b11 M
+1%
+#816000
+b101 Z
+#820000
+0%
+#825000
+b10 P
+1%
+#826000
+b110 Z
+#830000
+0%
+#835000
+b1010 !
+b1010 *
+b100 $
+b100 J
+b11 P
+b100 M
+b101 L
+1%
+#836000
+b111 Z
+#840000
+0%
+#845000
+b101 ,
+b1110 /
+b100 +
+b1001 -
+b0 P
+b10 O
+1%
+#846000
+b1000 Z
+#850000
+0%
+#855000
+b0 !
+b0 *
+b101 $
+b101 J
+b1010 .
+b1 P
+b101 M
+b1010 I
+1%
+#856000
+b1001 Z
+#860000
+0%
+#865000
+b1101 P
+1%
+#866000
+b1010 Z
+#870000
+0%
+#875000
+b0 P
+1%
+#876000
+b1000 )
+b1011 Z
+#880000
+0%
+#885000
+b110 $
+b110 J
+b0 .
+b1 P
+b110 M
+b0 I
+1%
+#890000
+0%
+#895000
+b10 P
+1%
+#896000

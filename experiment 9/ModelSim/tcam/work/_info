@@ -1,0 +1,76 @@
+m255
+K4
+z2
+!s11f vlog 2020.4 2020.10, Oct 13 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/modeltech64_2020.4/examples
+T_opt
+!s110 1789110329
+V6@<1eech>im33R;GB6FWU0
+Z1 04 7 4 work tcam_tb fast 0
+=1-94bb43dfc100-6aa3a838-3b8-6770
+o-quiet -auto_acc_if_foreign -work work
+Z2 tCvgOpt 0
+n@_opt
+Z3 OL;O;2020.4;71
+R0
+T_opt1
+!s110 1789110362
+VQb?Am=GXgl9mc<g>;SgiU2
+R1
+=1-94bb43dfc100-6aa3a859-305-c20
+o-quiet -auto_acc_if_foreign -work work +acc
+R2
+n@_opt1
+R3
+vtcam
+Z4 !s110 1789109922
+!i10b 1
+!s100 WDo7iljT6oXnglaV[=Alb1
+Z5 !s11b Dg1SIo80bB@j0V0VzS_@n1
+Il5[6fROD5Q[c7G_PQZ?]o1
+Z6 dC:/Users/Dotcom/Desktop/term tabestoon/Az DSD/HW9_403106092_ali_soltani_403106527_yeganeh_karbalaei_403106681_mohammadmahdi_moradi/ModelSim/tcam
+w1788362654
+8C:/Users/Dotcom/Desktop/term tabestoon/Az DSD/HW9_403106092_ali_soltani_403106527_yeganeh_karbalaei_403106681_mohammadmahdi_moradi/quartus/tcam/tcam.v
+FC:/Users/Dotcom/Desktop/term tabestoon/Az DSD/HW9_403106092_ali_soltani_403106527_yeganeh_karbalaei_403106681_mohammadmahdi_moradi/quartus/tcam/tcam.v
+!i122 0
+L0 25 84
+Z7 VDg1SIo80bB@j0V0VzS_@n1
+Z8 OL;L;2020.4;71
+r1
+!s85 0
+31
+Z9 !s108 1789109922.000000
+!s107 C:/Users/Dotcom/Desktop/term tabestoon/Az DSD/HW9_403106092_ali_soltani_403106527_yeganeh_karbalaei_403106681_mohammadmahdi_moradi/quartus/tcam/tcam.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|C:/Users/Dotcom/Desktop/term tabestoon/Az DSD/HW9_403106092_ali_soltani_403106527_yeganeh_karbalaei_403106681_mohammadmahdi_moradi/quartus/tcam/tcam.v|
+!i113 0
+Z10 o-work work -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R2
+vtcam_tb
+R4
+!i10b 1
+!s100 QWe_fMXDlFW9aj8BBgMdO3
+R5
+IH`i_HFW^=79]HcLZ86KAz1
+R6
+w1788362692
+8C:/Users/Dotcom/Desktop/term tabestoon/Az DSD/HW9_403106092_ali_soltani_403106527_yeganeh_karbalaei_403106681_mohammadmahdi_moradi/quartus/tcam/tcam_tb.v
+FC:/Users/Dotcom/Desktop/term tabestoon/Az DSD/HW9_403106092_ali_soltani_403106527_yeganeh_karbalaei_403106681_mohammadmahdi_moradi/quartus/tcam/tcam_tb.v
+!i122 1
+L0 10 121
+R7
+R8
+r1
+!s85 0
+31
+R9
+!s107 C:/Users/Dotcom/Desktop/term tabestoon/Az DSD/HW9_403106092_ali_soltani_403106527_yeganeh_karbalaei_403106681_mohammadmahdi_moradi/quartus/tcam/tcam_tb.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|C:/Users/Dotcom/Desktop/term tabestoon/Az DSD/HW9_403106092_ali_soltani_403106527_yeganeh_karbalaei_403106681_mohammadmahdi_moradi/quartus/tcam/tcam_tb.v|
+!i113 0
+R10
+R2

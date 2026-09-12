@@ -1,0 +1,16 @@
+\contentsline {section}{\numberline {1}هدف آزمایش}{2}{section.1}%
+\contentsline {section}{\numberline {2}مبانی نظری}{2}{section.2}%
+\contentsline {section}{\numberline {3}طراحی و الگوریتم پیاده‌سازی}{2}{section.3}%
+\contentsline {subsection}{\numberline {3.1}نمایش داده سه‌مقداری}{2}{subsection.3.1}%
+\contentsline {subsection}{\numberline {3.2}بیت اعتبار \lr {(Valid)}}{3}{subsection.3.2}%
+\contentsline {subsection}{\numberline {3.3}نمودار بلوکی پیمانه}{3}{subsection.3.3}%
+\contentsline {subsection}{\numberline {3.4}منطق نوشتن (برنامه‌ریزی ثبات‌ها)}{3}{subsection.3.4}%
+\contentsline {subsection}{\numberline {3.5}منطق مقایسه و انکودر اولویت}{3}{subsection.3.5}%
+\contentsline {section}{\numberline {4}پیاده‌سازی \lr {Verilog}}{3}{section.4}%
+\contentsline {subsection}{\numberline {4.1}پارامتریک بودن طراحی}{4}{subsection.4.1}%
+\contentsline {section}{\numberline {5}شبیه‌سازی و تست}{4}{section.5}%
+\contentsline {subsection}{\numberline {5.1}سناریوهای آزمون}{4}{subsection.5.1}%
+\contentsline {subsection}{\numberline {5.2}نتیجه موج شبیه‌سازی}{5}{subsection.5.2}%
+\contentsline {section}{\numberline {6}سنتز و بررسی منابع مصرفی روی \lr {FPGA}}{5}{section.6}%
+\contentsline {section}{\numberline {7}ملاحظات پیاده‌سازی روی بورد \lr {FPGA}}{6}{section.7}%
+\contentsline {section}{\numberline {8}نتیجه‌گیری}{6}{section.8}%

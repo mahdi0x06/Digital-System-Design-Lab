@@ -1,0 +1,113 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "seven_segment_low[0]",
+					"strict" : false
+				},
+				{
+					"name" : "seven_segment_low[1]",
+					"strict" : false
+				},
+				{
+					"name" : "seven_segment_low[2]",
+					"strict" : false
+				},
+				{
+					"name" : "seven_segment_low[3]",
+					"strict" : false
+				},
+				{
+					"name" : "seven_segment_low[4]",
+					"strict" : false
+				},
+				{
+					"name" : "seven_segment_low[5]",
+					"strict" : false
+				},
+				{
+					"name" : "seven_segment_low[6]",
+					"strict" : false
+				},
+				{
+					"name" : "seven_segment_high[0]",
+					"strict" : false
+				},
+				{
+					"name" : "seven_segment_high[1]",
+					"strict" : false
+				},
+				{
+					"name" : "seven_segment_high[2]",
+					"strict" : false
+				},
+				{
+					"name" : "seven_segment_high[3]",
+					"strict" : false
+				},
+				{
+					"name" : "seven_segment_high[4]",
+					"strict" : false
+				},
+				{
+					"name" : "seven_segment_high[5]",
+					"strict" : false
+				},
+				{
+					"name" : "seven_segment_high[6]",
+					"strict" : false
+				},
+				{
+					"name" : "error_led",
+					"strict" : false
+				},
+				{
+					"name" : "done_led",
+					"strict" : false
+				},
+				{
+					"name" : "clk",
+					"strict" : false
+				},
+				{
+					"name" : "reset",
+					"strict" : false
+				},
+				{
+					"name" : "input_x[0]",
+					"strict" : false
+				},
+				{
+					"name" : "input_x[7]",
+					"strict" : false
+				},
+				{
+					"name" : "input_x[6]",
+					"strict" : false
+				},
+				{
+					"name" : "input_x[5]",
+					"strict" : false
+				},
+				{
+					"name" : "input_x[4]",
+					"strict" : false
+				},
+				{
+					"name" : "input_x[3]",
+					"strict" : false
+				},
+				{
+					"name" : "input_x[2]",
+					"strict" : false
+				},
+				{
+					"name" : "input_x[1]",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

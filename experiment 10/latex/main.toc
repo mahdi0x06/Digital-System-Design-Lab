@@ -1,0 +1,56 @@
+\contentsline {section}{\numberline {1}هدف آزمایش}{3}{section.1}%
+\contentsline {section}{\numberline {2}مشخّصات معماری و قرارداد پشته}{3}{section.2}%
+\contentsline {subsection}{\numberline {2.1}ساختار کلّی پردازنده}{3}{subsection.2.1}%
+\contentsline {subsection}{\numberline {2.2}مجموعۀ دستورها}{4}{subsection.2.2}%
+\contentsline {subsection}{\numberline {2.3}نمودار بلوکی پردازندهٔ توسعه‌یافته}{4}{subsection.2.3}%
+\contentsline {section}{\numberline {3}توسعهٔ مسیر داده برای سه دستور جدید}{5}{section.3}%
+\contentsline {subsection}{\numberline {3.1}دستور \lr {SWAP}}{5}{subsection.3.1}%
+\contentsline {subsection}{\numberline {3.2}دستور \lr {SHL}}{5}{subsection.3.2}%
+\contentsline {subsection}{\numberline {3.3}دستور \lr {CMP}}{5}{subsection.3.3}%
+\contentsline {subsection}{\numberline {3.4}جدول ریزعملیات دستورهای جدید}{6}{subsection.3.4}%
+\contentsline {section}{\numberline {4}توسعهٔ واحد کنترل}{6}{section.4}%
+\contentsline {section}{\numberline {5}نگاشت حافظه و ورودی و خروجی}{7}{section.5}%
+\contentsline {section}{\numberline {6}ساختار فایل‌های اصلی و کدهای قابل سنتز}{8}{section.6}%
+\contentsline {subsection}{\numberline {6.1}هستۀ پردازنده: \lr {\texttt {stack\_cpu.v}}}{8}{subsection.6.1}%
+\contentsline {subsection}{\numberline {6.2}حافظه و درگاه‌ها: \lr {\texttt {memory\_io.v}}}{17}{subsection.6.2}%
+\contentsline {subsection}{\numberline {6.3}سامانۀ پردازنده: \lr {\texttt {processor\_system.v}}}{21}{subsection.6.3}%
+\contentsline {subsection}{\numberline {6.4}رمزگشای نمایشگر هفت‌قسمتی: \lr {\texttt {seven\_segment\_decoder.v}}}{22}{subsection.6.4}%
+\contentsline {subsection}{\numberline {6.5}پیمانۀ سطح بالا: \lr {\texttt {stack\_processor\_top.v}}}{23}{subsection.6.5}%
+\contentsline {section}{\numberline {7}برنامۀ زبان ماشین}{25}{section.7}%
+\contentsline {subsection}{\numberline {7.1}خانه‌های موقّت حافظه}{25}{subsection.7.1}%
+\contentsline {subsection}{\numberline {7.2}منطق محاسبۀ تابع}{25}{subsection.7.2}%
+\contentsline {subsection}{\numberline {7.3}تبدیل خروجی به دو رقم مبنای شانزده}{25}{subsection.7.3}%
+\contentsline {subsection}{\numberline {7.4}حدّاکثر عمق پشته}{26}{subsection.7.4}%
+\contentsline {subsection}{\numberline {7.5}نمودار روند برنامه}{27}{subsection.7.5}%
+\contentsline {subsection}{\numberline {7.6}جدول کامل کد ماشین}{27}{subsection.7.6}%
+\contentsline {section}{\numberline {8}سنتز و مشاهدۀ ساختار در \lr {Quartus}}{30}{section.8}%
+\contentsline {subsection}{\numberline {8.1}روند انجام کار در \lr {Quartus}}{30}{subsection.8.1}%
+\contentsline {subsection}{\numberline {8.2}نمای سطح بالای سامانه}{31}{subsection.8.2}%
+\contentsline {subsection}{\numberline {8.3}نمای تفصیلی پردازنده}{32}{subsection.8.3}%
+\contentsline {subsection}{\numberline {8.4}نتیجۀ کامپایل}{32}{subsection.8.4}%
+\contentsline {section}{\numberline {9}طراحی و روش کار فایل‌های آزمون}{33}{section.9}%
+\contentsline {subsection}{\numberline {9.1}آزمون مستقل دستورهای جدید در \lr {\texttt {stack\_cpu\_tb.v}}}{33}{subsection.9.1}%
+\contentsline {subsubsection}{\numberline {9.1.1}آزمون \lr {SWAP}}{33}{subsubsection.9.1.1}%
+\contentsline {subsubsection}{\numberline {9.1.2}آزمون‌های \lr {SHL}}{33}{subsubsection.9.1.2}%
+\contentsline {subsubsection}{\numberline {9.1.3}آزمون‌های \lr {CMP}}{33}{subsubsection.9.1.3}%
+\contentsline {subsection}{\numberline {9.2}آزمون برنامۀ کامل در \lr {\texttt {stack\_processor\_top\_tb.v}}}{34}{subsection.9.2}%
+\contentsline {section}{\numberline {10}توضیح کامل آزمون‌های الزامی برنامۀ نهایی}{35}{section.10}%
+\contentsline {subsection}{\numberline {10.1}ورودی \(X=0\)}{35}{subsection.10.1}%
+\contentsline {subsection}{\numberline {10.2}ورودی \(X=31\)}{35}{subsection.10.2}%
+\contentsline {subsection}{\numberline {10.3}ورودی \(X=32\)}{35}{subsection.10.3}%
+\contentsline {subsection}{\numberline {10.4}ورودی \(X=53\)}{36}{subsection.10.4}%
+\contentsline {subsection}{\numberline {10.5}ورودی \(X=54\)}{36}{subsection.10.5}%
+\contentsline {subsection}{\numberline {10.6}ورودی \(X=63\)}{36}{subsection.10.6}%
+\contentsline {subsection}{\numberline {10.7}ورودی \(X=64\)}{36}{subsection.10.7}%
+\contentsline {subsection}{\numberline {10.8}ورودی \(X=127\)}{37}{subsection.10.8}%
+\contentsline {subsection}{\numberline {10.9}ورودی \(X=128\)}{37}{subsection.10.9}%
+\contentsline {subsection}{\numberline {10.10}ورودی \(X=255\)}{37}{subsection.10.10}%
+\contentsline {section}{\numberline {11}شکل موج‌های منتخب و تحلیل آن‌ها}{38}{section.11}%
+\contentsline {subsection}{\numberline {11.1}شکل موج \(X=31\)}{39}{subsection.11.1}%
+\contentsline {subsection}{\numberline {11.2}شکل موج \(X=32\)}{39}{subsection.11.2}%
+\contentsline {subsection}{\numberline {11.3}شکل موج \(X=54\)}{40}{subsection.11.3}%
+\contentsline {subsection}{\numberline {11.4}شکل موج \(X=64\)}{40}{subsection.11.4}%
+\contentsline {subsection}{\numberline {11.5}شکل موج \(X=128\)}{41}{subsection.11.5}%
+\contentsline {section}{\numberline {12}انطباق با الزامات صورت آزمایش}{41}{section.12}%
+\contentsline {section}{\numberline {13}فایل‌های تحویلی}{42}{section.13}%
+\contentsline {section}{\numberline {14}جمع‌بندی}{42}{section.14}%
